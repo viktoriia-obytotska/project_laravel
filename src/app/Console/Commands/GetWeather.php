@@ -39,12 +39,17 @@ class GetWeather extends Command
     {
         $city = $this->argument('city');
 
-        $curl = curl_init('api.openweathermap.org/data/2.5/weather?q=$city&APPID=59002ce7a0903ae2f59dbd6e6214c558');
+        $curl = curl_init("api.openweathermap.org/data/2.5/weather?q=$city&APPID=59002ce7a0903ae2f59dbd6e6214c558");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($curl);
         curl_close($curl);
         $json_result = json_decode($result);
+        $cityname = $json_result->name;
+        $today = date("j.m.Y");
+        $temp = $json_result->main->temp."°C";
 
-        $this->info($json_result);
+        echo "Прогноз погоды на $today" .PHP_EOL;
+        echo "В городе $cityname температура $temp";
 
 
     }
