@@ -11,7 +11,7 @@ class GetWeather extends Command
      *
      * @var string
      */
-    protected $signature = 'get:weather {city}';
+    protected $signature = 'get:weather {city} {--queue=default}';
 
     /**
      * The console command description.
@@ -38,15 +38,19 @@ class GetWeather extends Command
     public function handle()
     {
         $city = $this->argument('city');
-
-        $curl = curl_init("api.openweathermap.org/data/2.5/weather?q=$city&APPID=59002ce7a0903ae2f59dbd6e6214c558");
+//        $url = config('config.weather.url');
+//        $url = sprintf($url, $city, config('config.weather.app_id'));
+        $url = 'api.openweathermap.org/data/2.5/weather?q=$city&APPID=59002ce7a0903ae2f59dbd6e6214c558';
+        $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($curl);
         curl_close($curl);
         $json_result = json_decode($result);
         $cityname = $json_result->name;
         $today = date("j.m.Y");
-        $temp = $json_result->main->temp."°C";
+        $temp = TempHelper::convertKelvinToCelcius($json_result->main->temp);
+        $wind_speed = $json_result->wind->speed;
+        $wind_direction = $json_result->wind->deg;
 
         echo "Прогноз погоды на $today" .PHP_EOL;
         echo "В городе $cityname температура $temp";
