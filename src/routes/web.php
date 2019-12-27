@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/weather/{city}', 'WeatherController@index');
+Route::get('/weather/city', 'WeatherController@action');
+
+Route::get('/weather', 'SearchController@show')->name('show');
+Route::post('/weather', 'SearchController@search')->name('search');
+
