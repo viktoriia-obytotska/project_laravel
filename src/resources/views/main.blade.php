@@ -58,8 +58,8 @@
                         <td>{{$perfume->slug}}</td>
                         <td>{{$perfume->description}}</td>
                         <td>{{$perfume->category_id}}</td>
-                        <td><img src="{{url('/storage/app/public'.$perfume->big_icon)}}" alt="Иконка"></td>
-                        <td><img src="/files/perfumes/small/gunpowder.png" alt="Иконка"></td>
+                        <td><img src="{{asset('storage/'.$perfume->big_icon)}}" alt="Иконка"></td>
+                        <td><img src="{{asset('storage/'.$perfume->small_icon)}}" alt="Иконка"></td>
                         <td>
                             Чистый:
                             <a target="_blank" download="qr_code_without_logo_gunpowder.png"

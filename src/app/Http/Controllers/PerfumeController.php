@@ -30,8 +30,8 @@ class PerfumeController extends Controller
         $perfumes->name = $request->name;
         $perfumes->slug= $request->slug;
         $perfumes->description=$request->description;
-        $perfumes->big_icon=$request->big_icon;
-        $perfumes->small_icon=$request->small_icon;
+        $perfumes->big_icon=$big_icon;
+        $perfumes->small_icon=$small_icon;
         $perfumes->category_id=$request->category;
         $perfumes->save();
 
