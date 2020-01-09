@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('perfume', 'PerfumeController@index');
+Route::post('perfume', 'PerfumeController@show');
+Route::get('perfume/category', 'PerfumeCategoryController@index');
