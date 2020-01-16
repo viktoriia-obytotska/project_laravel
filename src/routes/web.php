@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('register', 'UsersController@index');
+Route::post('register', 'UsersController@show');
+Route::get('user/posts', 'PostsController@index');
