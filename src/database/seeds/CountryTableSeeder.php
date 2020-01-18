@@ -1,0 +1,20 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class CountryTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        factory(App\Country::class, 100)->create()->each(function($c) {
+            $c->city()->saveMany(factory(App\City::class, 10)->make());
+
+        });
+
+    }
+}
