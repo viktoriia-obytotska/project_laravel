@@ -17,7 +17,6 @@ class CreatePublicationsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('city_id');
             $table->integer('owner_id');
-            $table->integer('book_id');
             $table->timestamps();
         });
     }

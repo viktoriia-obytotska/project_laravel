@@ -9,4 +9,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Author extends Authenticatable
 {
     protected $table = 'authors';
+
+    public function book()
+    {
+        $this->hasMany(Book::class, 'author_id', 'id');
+    }
 }

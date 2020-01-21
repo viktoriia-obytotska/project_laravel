@@ -11,17 +11,18 @@ class PublicationTableSeeder extends Seeder
      */
     public function run()
     {
-        $city_id = factory(App\City::class, 10)->create()->pluck('id')->toArray();
-        $owner_id = factory(App\Owner::class, 5)->create()->pluck('id')->toArray();
-        $book_id = factory(App\Book::class, 3)->create()->pluck('id')->toArray();
+        $cities = \App\City::all();
+        $owners = \App\Owner::all();
 
-        $publications = factory(App\Publication::class, 100)->create()->each(function($pub)
-        use ($city_id, $owner_id, $book_id) {
-            $pub->city_id = Arr::random($city_id);
-            $pub->owner_id = Arr::random($owner_id);
-            $pub->book_id = Arr::random($book_id);
-             $pub->save();
-        });
+        for($i = 0; $i<=100; $i++)
+        {
+            $pub = new \App\Publication();
+            $pub->city_id= $cities->random()->id;
+            $pub->owner_id= $owners->random()->id;
+
+            $pub->save();
+        };
+
     }
 
 
