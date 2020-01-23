@@ -10,7 +10,8 @@ class Country extends Authenticatable
 {
     protected $table = 'country';
 
-    public function city() {
+    public function city()
+    {
         return $this->hasMany(City::class);
     }
 }

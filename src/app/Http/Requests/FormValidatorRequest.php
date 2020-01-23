@@ -26,8 +26,8 @@ class FormValidatorRequest extends FormRequest
         return array(
             'name' => 'required|string|min:2|max:50',
             'year' => 'required|date_format:Y',
-            'publication_id' => 'required|exists:publications',
-            'author_id' => 'required|exists:authors',
+            'publication_id' => 'exists:publications',
+            'author_id' => 'exists:authors',
         );
     }
 }

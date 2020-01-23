@@ -51,6 +51,7 @@
             <select id="publication" name="publication" class="main__select">
                 @foreach($publications as $publication)
                 <option value="{{$publication->id}}" class="main__clause">
+                    {{$publication->city_id}} {{$publication->owner_id}}
                 </option>
                 @endforeach
             </select>
@@ -69,8 +70,17 @@
         </div>
     </div>
     <div class="row main__item main__location">
-        <button id="save_perfumes_button" type="submit" class="main__save">Сохранить</button>
+        <button id="save_books_button" type="submit" class="main__save">Сохранить</button>
     </div>
 </form>
+                @if (count($errors) > 0)
+                    <div>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+@endif
 </body>
 </html>

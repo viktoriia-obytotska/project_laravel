@@ -9,4 +9,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class City extends Authenticatable
 {
     protected $table = 'city';
+
+    public function country()
+    {
+        return $this->hasOne(Country::class);
+    }
 }
