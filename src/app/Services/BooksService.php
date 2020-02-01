@@ -14,6 +14,18 @@ class BooksService
         $books->publication_id = $request->publication;
         $books->author_id = $request->author;
 
-        $books->save;
+        $books->save();
+    }
+
+    public function update($request, $id)
+    {
+        $books = Book::find($id);
+        $books->name = $request->name;
+        $books->year = $request->year;
+        $books->publication_id = $request->publication;
+        $books->author_id = $request->author;
+
+        $books->save();
+
     }
 }

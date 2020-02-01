@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FormValidatorRequest extends FormRequest
+class SearchValidatorRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,7 @@ class FormValidatorRequest extends FormRequest
     public function rules()
     {
         return array(
-            'name' => 'required|string|min:2|max:50',
-            'year' => 'required|date_format:Y',
+            'name' => 'required|string|min:1|max:50',
             'publication' => 'required|exists:publications,id',
             'author' => 'required|exists:authors,id',
         );

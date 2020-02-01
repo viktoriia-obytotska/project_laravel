@@ -35,7 +35,9 @@
         <div class="main__wrap" id="primary">
             <h2 class="main__title">Список книг</h2>
             <a href="{{route('add_books')}}" data-fancybox="" class="main__button">Добавить книгу</a>
+            <a href="{{route('search_books')}}" data-fancybox="" class="main__button">Найти книгу</a>
             <div class="main__container">
+                <form action="{{route('saved_books')}}" method="post" id="book_form">
                 <table class="main__table ">
                     <tr class=" row  main__inner smells">
                         <th class="main__name">ИД</th>
@@ -44,35 +46,32 @@
                         <th class="main__name">Автор</th>
                         <th class="main__name">Издание</th>
                         <th class="main__name">Город</th>
-                        <th class="main__name">Владелец</th>
-                        <th class="main__name">Дата создания</th>
-                        <th class="main__name">Дата обновления</th>
                         <th class="main__name">Действие</th>
                     </tr>
-                    @foreach($items as $item)
+                    @foreach($books as $book)
                         <tr class=" row  main__inner main__info smells">
-                            <td>{{$item->id}}</td>
-                            <td>{{$item->name}}</td>
-                            <td>{{$item->year}}</td>
-                            <td>{{$item->first_name}} {{$item->surname}} {{$item->last_name}}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>{{$item->created_at}}</td>
-                            <td>{{$item->updated_at}}</td>
+                            <td>{{$book->id}}</td>
+                            <td>{{$book->name}}</td>
+                            <td>{{$book->year}}</td>
+                            <td>{{$book->first_name}} {{$book->surname}} {{$book->last_name}}</td>
+                            <td>{{$book->pub_name}}</td>
+                            <td>{{$book->city_name}}</td>
                             <td class="row main__action">
                                 <div>
-                                    @foreach($dels as $del)
-                                    <a href="{{route('delete_books', ['id'=> $del->id])}}">
+                                    <a href="{{route('edit_books', ['id'=>$book->id])}}">
+                                        <img onclick="editBook(9)"
+                                             src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-9/24/edit-validated-icon.png"
+                                             alt="edit"></a>
+                                    <a href="{{route('destroy_books', ['id'=>$book->id])}}">
                                         <img onclick="deleteBook(9)"
                                              src="http://93.119.155.54:1100/img/delete.svg"
                                              alt="delete"></a>
-                                        @endforeach
                                 </div>
                             </td>
                         </tr>
                     @endforeach
                 </table>
+                </form>
             </div>
         </div>
 

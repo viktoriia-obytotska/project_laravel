@@ -15,5 +15,9 @@
 Route::get('/', 'BooksController@index');
 Route::post('/', 'BooksController@store')->name('add_books');
 Route::get('/books', 'BooksController@show')->name('saved_books');
-Route::post('/books', 'BooksController@destroy')->name('delete_books');
+Route::get('/books/edit/{id}', 'BooksController@edit');
+Route::post('/books/edit/{id}', 'BooksController@update')->name('edit_books');
+Route::get('/books/delete/{id}', 'BooksController@destroy')->name('destroy_books');
+Route::get('/books/search', 'BooksController@search')->name('search_books');
+
 

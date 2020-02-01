@@ -51,7 +51,7 @@
             <select id="publication" name="publication" class="main__select">
                 @foreach($publications as $publication)
                 <option value="{{$publication->id}}" class="main__clause">
-                    {{$publication->city_id}} {{$publication->owner_id}}
+                    {{$publication->name}}
                 </option>
                 @endforeach
             </select>
