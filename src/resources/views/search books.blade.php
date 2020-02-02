@@ -38,10 +38,6 @@
                 <form action="{{route('search_books')}}" method="get" id="book_form">
                     <p><input type="search" name="query" value="{{('query') }}" placeholder="Поиск по названию">
                         <input type="submit" value="Найти"></p><br>
-                    <p><input type="search" name="query" placeholder="Поиск по автору">
-                        <input type="submit" value="Найти"></p><br>
-                    <p><input type="search" name="query" placeholder="Поиск по изданию">
-                        <input type="submit" value="Найти"></p>
                     @foreach($results as $result)
                         <div>{{$result->name}}</div>
                         @endforeach
@@ -49,8 +45,6 @@
                 </form>
             </div>
         </div>
-
-
 
     </div>
 </div>
