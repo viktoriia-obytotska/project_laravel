@@ -13,4 +13,15 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/register', 'RegisterController@index')->name('register');
+Route::post('/register', 'RegisterController@index');
+Route::post('/token', 'AuthController@getToken');
+
+Route::middleware('auth_api')->group(function (){
+    Route::get('books', 'BookController@index');
+    Route::post('books', 'BookController@store');
+    Route::get('books/{id}', 'BookController@show');
+    Route::put('books/{id}', 'BookController@update');
+    Route::delete('books{id}', 'BookController@destroy');
+});
+
+
