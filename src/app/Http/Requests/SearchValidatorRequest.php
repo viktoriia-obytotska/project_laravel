@@ -24,9 +24,9 @@ class SearchValidatorRequest extends FormRequest
     public function rules()
     {
         return array(
-            'name' => 'required|string|min:1|max:50',
-            'publication' => 'required|exists:publications,id',
-            'author' => 'required|exists:authors,id',
+            'name' => 'string|min:1|max:50',
+            'publication' => 'exists:publications,id',
+            'author' => 'exists:authors,id',
         );
     }
 }

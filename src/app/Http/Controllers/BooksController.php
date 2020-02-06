@@ -92,16 +92,28 @@ class BooksController extends Controller
     public function search(SearchValidatorRequest $request)
     {
         $query = $request->input('query');
-        if(isset($query))
+        if(!empty($query))
         {
-            $results = Book::where('name', 'like', '%$query%')->get();
+            $query = Book::select('books.*')->where('name', 'like', '%$query%');
+        }
+        if(!empty($query)){
+            $query = $query->leftJoin('authors', 'books.author_id', '=', 'authors.id')
+                            ->where('first_name', 'like', '%$query%')
+                            ->where('surname', 'like', '%$query%')
+                            ->where('last_name', 'like', '%$query%');
+//        if(!empty($query))
+//        {
+//            $query = $query->leftJoin('publications', 'books.publication_id', '=', 'publications.id')
+//                            ->where('', 'like', '%$query%');
 
+            $results = $query->get();
             return view('search books', compact('query', 'results'));
         }
-        else{
-            return null;
-        }
+        else
+            {
+            return view('search books');
 
+        }
     }
 
 }

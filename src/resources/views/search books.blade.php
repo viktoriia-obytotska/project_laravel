@@ -33,15 +33,31 @@
     <div class="main">
         @csrf
         <div class="main__wrap" id="primary">
-            <h2 class="main__title">Найти книгу</h2>
+            <h2 class="main__title">Поиск книг</h2>
             <div class="main__container">
                 <form action="{{route('search_books')}}" method="get" id="book_form">
-                    <p><input type="search" name="query" value="{{('query') }}" placeholder="Поиск по названию">
-                        <input type="submit" value="Найти"></p><br>
-                    @foreach($results as $result)
-                        <div>{{$result->name}}</div>
+                    <p><input type="search" name="query"  placeholder="Поиск по названию"></p><br>
+                    <p><input type="search" name="query"  placeholder="Поиск по автору"></p><br>
+                    <p><input type="search" name="query"  placeholder="Поиск по издательству"></p><br>
+                        <input type="submit" value="Найти">
+                    @if(isset($results))
+                    <table class="main__table ">
+                        <tr class=" row  main__inner smells">
+                            <th class="main__name">ИД</th>
+                            <th class="main__name">Имя</th>
+                            <th class="main__name">Автор</th>
+                            <th class="main__name">Издание</th>
+                        </tr>
+                        @foreach($results as $result)
+                            <tr class=" row  main__inner main__info smells">
+                                <td>{{$result->id}}</td>
+                                <td>{{$result->name}}</td>
+                                <td>{{$result->first_name}} {{$result->surname}} {{$result->last_name}}</td>
+                                <td>{{}}</td>
+                            </tr>
                         @endforeach
-
+                    </table>
+                    @endif
                 </form>
             </div>
         </div>
