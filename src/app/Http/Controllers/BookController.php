@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookRequest;
 use Illuminate\Http\Request;
 use App\Http\Resources\Book as BookResource;
 use App\Book;
@@ -13,7 +14,7 @@ class BookController extends Controller
         return new BookResource(Book::first());
     }
 
-    public function store(Request $request)
+    public function store(BookRequest $request)
     {
         $books = new Book();
         $books->name = $request->name;
@@ -30,7 +31,7 @@ class BookController extends Controller
         return new BookResource(Book::find($id));
     }
 
-    public function update(Request $request, $id)
+    public function update(BookRequest $request, $id)
     {
         $books = Book::find($id);
         $books->name = $request->name;
