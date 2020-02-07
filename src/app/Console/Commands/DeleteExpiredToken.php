@@ -38,14 +38,14 @@ class DeleteExpiredToken extends Command
      */
     public function handle()
     {
-        $token = User::select('token')->get();
+        $token = User::get();
         $time = 3600;
         foreach ($token as $item)
         {
             $data = strtotime($item->created_at)+$time;
             if($data < time())
             {
-                User::find($item->token)->delete();
+                $item->delete();
             }
         }
         $this->info('Token deleted');
