@@ -80,8 +80,7 @@ class BooksController extends Controller
     public function destroy($id)
     {
         $books = Book::find($id);
-        if (isset($books))
-        {
+        if (isset($books)) {
             $books->where('id', $id)->delete();
         }
 
@@ -91,26 +90,26 @@ class BooksController extends Controller
 
     public function search(SearchValidatorRequest $request)
     {
-        $query = $request->input('query');
-        if(!empty($query))
+        if ($query  = $request->get('query'))
         {
-            $query = Book::select('books.*')->where('name', 'like', '%$query%');
+            $builder = Book::select('books.*')->where('name', 'like', "%$query%");
         }
-        if(!empty($query)){
-            $query = $query->leftJoin('authors', 'books.author_id', '=', 'authors.id')
-                            ->where('first_name', 'like', '%$query%')
-                            ->where('surname', 'like', '%$query%')
-                            ->where('last_name', 'like', '%$query%');
-//        if(!empty($query))
+        if ($author = $request->get('query_aut')) {
+            $query = $builder->leftJoin('authors', 'books.author_id', '=', 'authors.id')
+                ->orWhere('authors.first_name', 'like', "%$query%")
+                ->orWhere('authors.surname', 'like', "%$query%")
+                ->orWhere('authors.last_name', 'like', "%$query%");
+
+
+//        if($publication = $request->get('query_pub'))
 //        {
-//            $query = $query->leftJoin('publications', 'books.publication_id', '=', 'publications.id')
-//                            ->where('', 'like', '%$query%');
+//            $query = $builder = $query->leftJoin('publications', 'books.publication_id', '=', 'publications.id')
+//                            ->where('publications.name', 'like', "%$query%");
 
             $results = $query->get();
+            var_dump($results->toArray());die;
             return view('search books', compact('query', 'results'));
-        }
-        else
-            {
+        } else {
             return view('search books');
 
         }

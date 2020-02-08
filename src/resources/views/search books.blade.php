@@ -37,8 +37,8 @@
             <div class="main__container">
                 <form action="{{route('search_books')}}" method="get" id="book_form">
                     <p><input type="search" name="query"  placeholder="Поиск по названию"></p><br>
-                    <p><input type="search" name="query"  placeholder="Поиск по автору"></p><br>
-                    <p><input type="search" name="query"  placeholder="Поиск по издательству"></p><br>
+                    <p><input type="search" name="query_aut"  placeholder="Поиск по автору"></p><br>
+{{--                    <p><input type="search" name="query_pub"  placeholder="Поиск по издательству"></p><br>--}}
                         <input type="submit" value="Найти">
                     @if(isset($results))
                     <table class="main__table ">

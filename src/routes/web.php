@@ -21,4 +21,6 @@ Route::get('/books/{id}/delete', 'BooksController@destroy')->name('destroy_books
 Route::get('/books/search', 'BooksController@search');
 Route::post('/books/search', 'BooksController@search')->name('search_books');
 
+Route::get('/agent', 'AgentController@mobileAgent');
+
 
