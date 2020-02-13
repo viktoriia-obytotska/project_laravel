@@ -90,29 +90,31 @@ class BooksController extends Controller
 
     public function search(SearchValidatorRequest $request)
     {
-        if ($query  = $request->get('query'))
-        {
+        if ($query = $request->get('query')) {
             $builder = Book::select('books.*')->where('name', 'like', "%$query%");
         }
         if ($author = $request->get('query_aut')) {
             $query = $builder->leftJoin('authors', 'books.author_id', '=', 'authors.id')
-                ->orWhere('authors.first_name', 'like', "%$query%")
-                ->orWhere('authors.surname', 'like', "%$query%")
-                ->orWhere('authors.last_name', 'like', "%$query%");
+                ->where(function ($q) use ($author) {
+                    $q->orWhere('authors.first_name', 'like', "%$author%")
+                        ->orWhere('authors.surname', 'like', "%$author%")
+                        ->orWhere('authors.last_name', 'like', "%$author%");
+                });
 
 
-//        if($publication = $request->get('query_pub'))
-//        {
-//            $query = $builder = $query->leftJoin('publications', 'books.publication_id', '=', 'publications.id')
-//                            ->where('publications.name', 'like', "%$query%");
+            if ($publication = $request->get('query_pub')) {
+                $query = $query->leftJoin('publications', 'books.publication_id', '=', 'publications.id')
+                    ->orWhere('publications.name', 'like', "%$publication%");
 
-            $results = $query->get();
-            var_dump($results->toArray());die;
-            return view('search books', compact('query', 'results'));
-        } else {
-            return view('search books');
+                $results = $query->get();
+                var_dump($results->toArray());
+                die;
+                return view('search books', compact('query', 'results'));
+            } else {
+                return view('search books');
 
+            }
         }
-    }
 
+    }
 }

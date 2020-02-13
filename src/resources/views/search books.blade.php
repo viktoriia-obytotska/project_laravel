@@ -38,7 +38,7 @@
                 <form action="{{route('search_books')}}" method="get" id="book_form">
                     <p><input type="search" name="query"  placeholder="Поиск по названию"></p><br>
                     <p><input type="search" name="query_aut"  placeholder="Поиск по автору"></p><br>
-{{--                    <p><input type="search" name="query_pub"  placeholder="Поиск по издательству"></p><br>--}}
+                    <p><input type="search" name="query_pub"  placeholder="Поиск по издательству"></p><br>
                         <input type="submit" value="Найти">
                     @if(isset($results))
                     <table class="main__table ">
@@ -53,7 +53,7 @@
                                 <td>{{$result->id}}</td>
                                 <td>{{$result->name}}</td>
                                 <td>{{$result->first_name}} {{$result->surname}} {{$result->last_name}}</td>
-                                <td>{{}}</td>
+                                <td>{{$result->name}}</td>
                             </tr>
                         @endforeach
                     </table>

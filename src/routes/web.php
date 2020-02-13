@@ -22,5 +22,6 @@ Route::get('/books/search', 'BooksController@search');
 Route::post('/books/search', 'BooksController@search')->name('search_books');
 
 Route::get('/agent', 'AgentController@mobileAgent');
+Route::get('/categories', 'ItemsController@category')->name('category');
 
 

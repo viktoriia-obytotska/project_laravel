@@ -14,4 +14,6 @@ class Publication extends Authenticatable
     {
         $this->hasMany(Book::class, 'publication_id', 'id');
     }
+
+    protected $fillable = [ 'name', 'city_id', 'owner_id', ];
 }
