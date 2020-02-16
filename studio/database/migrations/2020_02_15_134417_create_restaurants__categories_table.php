@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstablishmentsTable extends Migration
+class CreateRestaurantsCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateEstablishmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('establishments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name', 35);
+        Schema::create('restaurants__categories', function (Blueprint $table) {
+            $table->integer('restaurant_id')->unsigned();
             $table->integer('category_id')->unsigned();
-            $table->string('image');
-            $table->timestamps();
-
-            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
@@ -31,6 +26,6 @@ class CreateEstablishmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('establishments');
+        Schema::dropIfExists('restaurants__categories');
     }
 }
