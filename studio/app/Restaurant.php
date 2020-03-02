@@ -8,5 +8,15 @@ class Restaurant extends Model
 {
     protected $table = 'restaurants';
 
-    protected $fillable = [ 'name', 'image'];
+    public function category()
+    {
+        return $this->belongsToMany(Category::class);
+    }
+
+    public function dish()
+    {
+        return $this->hasMany(Dish::class, 'restaurant_id', 'id');
+    }
+
+
 }

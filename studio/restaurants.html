@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="ua" ng-app="App">
+<head>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<title>Mister.Am - сервіс замовлення і доставки страв</title>
+<meta name="description" content="Mister.Am - сервіс замовлення страв з найкращих закладів міста. Швидка доставка їжі з ресторанів, без націнок. Знижки та акції" />
+<meta name="keywords" content="" />
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://assets.misteram.com.ua/misteram-public/dbbb55ec8952d243313863c6e10033ba.png" />
+<meta property="og:url" content="https://misteram.com.ua/chernigov">
+<meta property="og:title" content="Mister.Am - сервіс замовлення і доставки страв">
+<meta property="og:description" content="Mister.Am - сервіс замовлення страв з найкращих закладів міста. Швидка доставка їжі з ресторанів, без націнок. Знижки та акції">
+<meta property="og:site_name" content="Mister.Am">
+<link rel="stylesheet" href="https://misteram.com.ua/css/companies.css?v=186" type="text/css">
+<link rel="shortcut icon" href="https://assets.misteram.com.ua/misteram-public/favicon_48.png" type="image/png" />
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+        {'gtm.start': new Date().getTime(),event:'gtm.js'}
+    );var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K62V9Q');</script>
+
+<script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/2b676bbe8c81ecb904eb16bf53ffaf87_1.js" async></script>
+<script type="text/javascript">
+    window.addEventListener('load', function() {
+        oSpP.push('city', 'chernigov');
+    });
+</script></head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K62V9Q"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="container" data-ng-controller="CompaniesController" data-ng-init="city_id=1;activeCategory_id=0">
+<header>
+<div class="top-dark-panel">
+<div class="dropdown js dropdown-saas mobile set-cookies-geoid">
+<span>Чернігів</span>
+<ul>
+<li><a href="/vinnytsia">Вінниця</a></li>
+<li><a href="/zhytomyr">Житомир</a></li>
+<li><a href="/frankivsk">Івано-Франківськ</a></li>
+<li><a href="/kremenchug">Кременчук</a></li>
+<li><a href="/kropyvnytsky">Кропивницький</a></li>
+<li><a href="/lutsk">Луцьк</a></li>
+<li><a href="/poltava">Полтава</a></li>
+<li><a href="/rivne">Рівне</a></li>
+<li><a href="/sumy">Суми</a></li>
+<li><a href="/kherson">Херсон</a></li>
+<li><a href="/khmelnytsky">Хмельницький</a></li>
+<li><a href="/cherkassy">Черкаси</a></li>
+<li><a href="/chernivtsi">Чернівці</a></li>
+<li><a target="_blank" href="http://start.mister.am" class="city-add">Підключити місто</a></li>
+</ul>
+</div>
+<p>Замовлення та доставка страв в</p>
+<div class="dropdown js dropdown-saas">
+<span>Чернігові</span>
+<ul>
+<li> <a href="/vinnytsia">Вінниця</a></li>
+<li> <a href="/zhytomyr">Житомир</a></li>
+<li> <a href="/frankivsk">Івано-Франківськ</a></li>
+<li> <a href="/kremenchug">Кременчук</a></li>
+<li> <a href="/kropyvnytsky">Кропивницький</a></li>
+<li> <a href="/lutsk">Луцьк</a></li>
+<li> <a href="/poltava">Полтава</a></li>
+<li> <a href="/rivne">Рівне</a></li>
+<li> <a href="/sumy">Суми</a></li>
+<li> <a href="/kherson">Херсон</a></li>
+<li> <a href="/khmelnytsky">Хмельницький</a></li>
+<li> <a href="/cherkassy">Черкаси</a></li>
+<li> <a href="/chernivtsi">Чернівці</a></li>
+<li><a target="_blank" href="http://start.mister.am" class="city-add">Підключити місто</a></li>
+</ul>
+</div>
+<div class="dropdown js right not-select write-us user-links-dropdown" style="margin-right: 15px;">
+<span>Мій кабінет</span>
+<ul>
+<li>
+<a class=" link" href="//misteram.com.ua/login" data-mode="1">Вхід</a>
+</li>
+<li>
+<a class=" link" href="//misteram.com.ua/register" data-mode="1">Реєстрація</a>
+</li>
+</ul>
+</div>
+<div class="dropdown mobile js not-select account">
+<span>Мій кабінет</span>
+<ul>
+<li>
+<a class=" link" href="//misteram.com.ua/login" data-mode="1">Вхід</a>
+</li>
+<li>
+<a class=" link" href="//misteram.com.ua/register" data-mode="1">Реєстрація</a>
+</li>
+</ul>
+</div>
+</div> <div class="top clear sticky-header">
+<div class="mobile-fixed-panel">
+<div class="mobile-menu"></div>
+<div class="logo">
+<a href="/?city=chernigov">
+<img src="https://misteram.com.ua/images/svg/new_logos/logo_full_blue.svg" alt="Mister.Am" />
+</a>
+</div>
+<nav class="mobile  with-top-action  ">
+<ul>
+<li><a href="/chernigov" class="active">заклади</a></li>
+<li>
+<a href="/chernigov/promotions">
+акції
+<span class="week-dish">Страва тижня</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="search-form">
+<input type="text" name="search" id="search" placeholder="Пошук закладів" />
+<button name="search-btn" type="button"></button>
+</div>
+</div>
+<nav class="non-mobile  with-top-action  ">
+<ul>
+<li><a href="/chernigov" class="active">заклади</a></li>
+<li>
+<a href="/chernigov/promotions">
+акції
+<span class="week-dish">Страва тижня</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="bl-online-chat">
+<p>
+<a class="header-phone-call js-header-phone-city" href="tel:(093) 1-500-700">(093) 1-500-700</a>
+</p>
+<div>
+<p class="other" id="custom-chatra-button" data-count-operators="1" data-chatra-timeout="1200">
+<span>Онлайн-чат</span></p>
+</div>
+</div>
+</div>
+</header> <section class="clear">
+<div class="sidebar">
+<div class="js-sticky company-timesheet-sticky">
+<div class="title">Вибір закладу</div>
+<div class="company-menu">
+<ul>
+<li data-ng-click="scrollToTop();changeCategory(0);" data-company-menu-types>
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(0) }">
+<span class="company-menu__img-box">
+ <img alt="all-food-icon" src="/images/allfood.png">
+</span>
+<span class="company-menu__item-name" data-standart="Усі заклади" data-category_id="0">
+Усі заклади
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(138)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(138) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/8be518f9bf71e9d5f0bc725d95548445.png" alt="Пицца" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="138" data-nameNominative="Піца" data-nameAccusative="Піцу">
+Піца
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(20)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(20) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/0213f3d6f678f590998f6e1f1abf937d.png" alt="Суши" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="20" data-nameNominative="Суші" data-nameAccusative="Суші">
+Суші
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(22)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(22) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/5a12edd23456b667d01933485c49bd3b.png" alt="Бургеры" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="22" data-nameNominative="Бургери" data-nameAccusative="Бургери">
+Бургери
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(15)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(15) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/f98ff0ddd110dcbfb4617bbeeaa9866b.png" alt="Блюда из мяса" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="15" data-nameNominative="М’ясо" data-nameAccusative="М’ясо">
+М’ясо
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(16)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(16) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/68b61e9e03dbfc46e2939965a252a2a5.png" alt="Блюда из рыбы" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="16" data-nameNominative="Страви з риби" data-nameAccusative="Страви з риби">
+Страви з риби
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(8)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(8) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/827d1885da933e44c8ca6ba9a051308c.png" alt="Салаты" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="8" data-nameNominative="Салати" data-nameAccusative="Салати">
+Салати
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(9)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(9) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/254617a66cb9d8a9b382999a0c5b2272.png" alt="Десерты" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="9" data-nameNominative="Десерти" data-nameAccusative="Десерти">
+Десерти
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div> <div class="content">
+<div class="block-collect-pizza  display-flex display-none">
+<ul class="ingredients">
+<li class="mashrooms"></li>
+<li class="tomatoes"></li>
+<li class="salami"></li>
+</ul>
+<div class="block-wrapper-text-collect-pizza">
+<p class="welcome-title-collect-pizza">Зберіть свою піцу - і отримайте її безкоштовно!</p>
+<p>Реєструйтеся на Mister.Am, збирайте інгредієнти - і отримуйте смачну піцу в подарунок!</p>
+</div>
+<input class="js-go-to-register" data-href="//misteram.com.ua/mypizza?utm_source=misteram&amp;utm_medium=topbanner&amp;utm_campaign=chernigov" type="submit" value="Реєстрація">
+</div>
+<div class="city-notice-container">
+</div>
+<div class="card-wrapper home-page">
+<div class="card-mobile-menu no-sticky" data-ng-cloak data-dishes-categories-menu-mobile="0">
+<div class="company-menu-mobile-container">
+<ul class="company-menu-mobile">
+<li data-ng-click="scrollToTop();changeCategory(0, false);" data-company-menu-types>
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(0) }">
+<span class="company-menu__img-box">
+<img alt="allfood-icon" src="/images/allfood.png">
+</span>
+<span class="company-menu__item-name js-all-places" data-category_id="0" data-standart="Усі заклади">
+Усі заклади
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(138, false)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(138) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/8be518f9bf71e9d5f0bc725d95548445.png" alt="Пицца" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="138" data-nameNominative="Піца" data-nameAccusative="Піцу">
+Піца
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(20, false)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(20) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/0213f3d6f678f590998f6e1f1abf937d.png" alt="Суши" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="20" data-nameNominative="Суші" data-nameAccusative="Суші">
+Суші
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(22, false)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(22) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/5a12edd23456b667d01933485c49bd3b.png" alt="Бургеры" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="22" data-nameNominative="Бургери" data-nameAccusative="Бургери">
+Бургери
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(15, false)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(15) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/f98ff0ddd110dcbfb4617bbeeaa9866b.png" alt="Блюда из мяса" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="15" data-nameNominative="М’ясо" data-nameAccusative="М’ясо">
+М’ясо
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(16, false)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(16) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/68b61e9e03dbfc46e2939965a252a2a5.png" alt="Блюда из рыбы" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="16" data-nameNominative="Страви з риби" data-nameAccusative="Страви з риби">
+Страви з риби
+</span>
+</a>
+</li>
+<li data-ng-click="scrollToTop();changeCategory(8, false)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(8) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/827d1885da933e44c8ca6ba9a051308c.png" alt="Салаты" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="8" data-nameNominative="Салати" data-nameAccusative="Салати">
+Салати
+</span>
+</a>
+</li>
+ <li data-ng-click="scrollToTop();changeCategory(9, false)">
+<a href="javascript:void(0);" data-ng-class="{'active': $index == 0, 'active': isCurrentType(9) }">
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/254617a66cb9d8a9b382999a0c5b2272.png" alt="Десерты" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="9" data-nameNominative="Десерти" data-nameAccusative="Десерти">
+Десерти
+</span>
+</a>
+</li>
+</ul>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="card-menu-container">
+<h3 data-ng-init='types=[]' class="card-menu-title active" data-ng-click='showList();'>
+<span class="company-menu__img-box">
+<img alt="allfood-icon" src="/images/allfood.png"> 
+</span>
+<span class="company-menu__item-name">
+<% currentCategoryName || 'Все заведения Чернигова' %>
+</span>
+</h3>
+<div class='card-menu-dropdown clearfix' data-ng-class="{'active': isShowList }">
+<h3 data-ng-click='scrollToTop();changeMenuMobile(0, $event);changeCategory(0);' data-category-id="0" data-company-menu-types>
+<span class="company-menu__img-box">
+<img alt="allfood-icon" src="/images/allfood.png">
+</span>
+<span class="company-menu__item-name js-all-places" data-standart="Усі заклади" data-category_id="0">
+Усі заклади
+</span>
+</h3>
+<h3 data-ng-click='scrollToTop();changeMenuMobile(138, $event);changeCategory(138);' data-category-id="138" data-company-menu-types>
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/8be518f9bf71e9d5f0bc725d95548445-400x0.png" alt="Пицца" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="138" data-nameNominative="Піца" data-nameAccusative="Піцу">
+Піца
+</span>
+</h3>
+<h3 data-ng-click='scrollToTop();changeMenuMobile(20, $event);changeCategory(20);' data-category-id="20" data-company-menu-types>
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/0213f3d6f678f590998f6e1f1abf937d-400x0.png" alt="Суши" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="20" data-nameNominative="Суші" data-nameAccusative="Суші">
+Суші
+</span>
+</h3>
+<h3 data-ng-click='scrollToTop();changeMenuMobile(22, $event);changeCategory(22);' data-category-id="22" data-company-menu-types>
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/5a12edd23456b667d01933485c49bd3b-400x0.png" alt="Бургеры" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="22" data-nameNominative="Бургери" data-nameAccusative="Бургери">
+Бургери
+</span>
+</h3>
+<h3 data-ng-click='scrollToTop();changeMenuMobile(15, $event);changeCategory(15);' data-category-id="15" data-company-menu-types>
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/f98ff0ddd110dcbfb4617bbeeaa9866b-400x0.png" alt="Блюда из мяса" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="15" data-nameNominative="М’ясо" data-nameAccusative="М’ясо">
+М’ясо
+</span>
+</h3>
+<h3 data-ng-click='scrollToTop();changeMenuMobile(16, $event);changeCategory(16);' data-category-id="16" data-company-menu-types>
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/68b61e9e03dbfc46e2939965a252a2a5-400x0.png" alt="Блюда из рыбы" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="16" data-nameNominative="Страви з риби" data-nameAccusative="Страви з риби">
+Страви з риби
+</span>
+</h3>
+<h3 data-ng-click='scrollToTop();changeMenuMobile(8, $event);changeCategory(8);' data-category-id="8" data-company-menu-types>
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/827d1885da933e44c8ca6ba9a051308c-400x0.png" alt="Салаты" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="8" data-nameNominative="Салати" data-nameAccusative="Салати">
+Салати
+</span>
+</h3>
+<h3 data-ng-click='scrollToTop();changeMenuMobile(9, $event);changeCategory(9);' data-category-id="9" data-company-menu-types>
+<span class="company-menu__img-box">
+<img src="https://assets.misteram.com.ua/misteram-public/254617a66cb9d8a9b382999a0c5b2272-400x0.png" alt="Десерты" onerror="this.src='/images/noimg.gif'" />
+</span>
+<span class="company-menu__item-name" data-category_id="9" data-nameNominative="Десерти" data-nameAccusative="Десерти">
+Десерти
+</span>
+</h3>
+</div>
+</div>
+</div>
+</div> <div class="category-name" style="display: none">
+<h1 ng-cloak>
+<% currentCategoryName %>
+<span ng-switch="currentCategoryName">
+<span ng-switch-when="Усі заклади">
+Чернігова
+</span>
+<span ng-switch-default>
+в Чернігові
+</span>
+</span>
+</h1>
+</div>
+<div class="js-stub-category-name" style="height: 12px;"></div> <div class="companies clearfix js-all-companies" data-load-more-companies data-ng-init='items=[];categories=[{&quot;id&quot;:138,&quot;name&quot;:&quot;\u041f\u0456\u0446\u0430&quot;,&quot;urlPath&quot;:&quot;\/chernigov\/pizza&quot;},{&quot;id&quot;:20,&quot;name&quot;:&quot;\u0421\u0443\u0448\u0456&quot;,&quot;urlPath&quot;:&quot;\/chernigov\/sushi&quot;},{&quot;id&quot;:22,&quot;name&quot;:&quot;\u0411\u0443\u0440\u0433\u0435\u0440\u0438&quot;,&quot;urlPath&quot;:&quot;\/chernigov\/burger&quot;},{&quot;id&quot;:15,&quot;name&quot;:&quot;\u041c\u2019\u044f\u0441\u043e&quot;,&quot;urlPath&quot;:&quot;\/chernigov\/meat&quot;},{&quot;id&quot;:16,&quot;name&quot;:&quot;\u0421\u0442\u0440\u0430\u0432\u0438 \u0437 \u0440\u0438\u0431\u0438&quot;,&quot;urlPath&quot;:&quot;\/chernigov\/fish&quot;},{&quot;id&quot;:8,&quot;name&quot;:&quot;\u0421\u0430\u043b\u0430\u0442\u0438&quot;,&quot;urlPath&quot;:&quot;\/chernigov\/salads&quot;},{&quot;id&quot;:9,&quot;name&quot;:&quot;\u0414\u0435\u0441\u0435\u0440\u0442\u0438&quot;,&quot;urlPath&quot;:&quot;\/chernigov\/desserts&quot;}];base_url="/chernigov"'>
+<div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/dailybox" class="ui no-underline border-underline solid">Daily Box</a>
+</div>
+<div class="rait">
+<span class="small-rating">мало оцінок</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/dailybox">
+<img src="https://assets.misteram.com.ua/misteram-public/9f003f43932ad1bd8d1f0250a07ea31d-400x0.png" alt="Daily Box" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item">
+<div class="left">
+<span class="icon menu">
+Меню без націнок
+</span>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 15:00
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="free">
+Доставка від 0 грн.
+</span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/nasha-bulochka" class="ui no-underline border-underline solid">Наша булочка</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">10 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/nasha-bulochka">
+<img src="https://assets.misteram.com.ua/misteram-public/dfcb0110e9ab67dbfe328582bb708a15-400x0.png" alt="Наша булочка" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item has">
+<div class="discont" data-word-case>
+<div class="triangle"></div>
+<span>Страва тижня! Знижка 40%</span>
+<div class="right-triangle"></div>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 18:00
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="no-free">
+Вартість доставки - вiд 45 грн. </span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/zivot-a-pivo" class="ui no-underline border-underline solid">Zivot a Pivo</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.6 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/zivot-a-pivo">
+<img src="https://assets.misteram.com.ua/misteram-public/e98aeb7baa71fef5e9de0041c8c214bd-400x0.png" alt="Zivot a Pivo" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item has">
+<div class="discont" data-word-case>
+<div class="triangle"></div>
+<span>Знижка тижня! Знижка 30%</span>
+<div class="right-triangle"></div>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+15:00 - 22:30
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="no-free">
+Вартість доставки - вiд 45 грн. </span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/hochu-sushi" class="ui no-underline border-underline solid">Хочу Суші</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.8 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/hochu-sushi">
+<img src="https://assets.misteram.com.ua/misteram-public/918a1bc3ed960c7a4ba1d1b91f22ead6-400x0.png" alt="Хочу Суші" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item has">
+<div class="discont" data-word-case>
+<div class="triangle"></div>
+<span>Знижка</span>
+<div class="right-triangle"></div>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+13:00 - 23:59
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="free">
+Доставка від 0 грн.
+</span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/peperoni" class="ui no-underline border-underline solid">Peperoni</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.6 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/peperoni">
+<img src="https://assets.misteram.com.ua/misteram-public/066fc4e0173e7a0f98fb82d0cf3ae851-400x0.png" alt="Peperoni" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item">
+<div class="left">
+<span class="icon menu">
+Меню без націнок
+</span>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 23:30
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="free">
+Доставка від 0 грн.
+</span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/ny-street-pizza-cn" class="ui no-underline border-underline solid">New York Street Pizz...</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.6 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/ny-street-pizza-cn">
+<img src="https://assets.misteram.com.ua/misteram-public/87de1d1c2d3ab88feb4e630328846b69-400x0.png" alt="New York Street Pizza" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item">
+<div class="left">
+<span class="icon menu">
+Меню без націнок
+</span>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 21:00
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="no-free">
+Вартість доставки - вiд 45 грн. </span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/oxy" class="ui no-underline border-underline solid">OXY Sushi</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.7 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/oxy">
+<img src="https://assets.misteram.com.ua/misteram-public/2a7ac2e0f2f8e7a5d2579a3dab753a9f-400x0.png" alt="OXY Sushi" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item has">
+ <div class="discont" data-word-case>
+<div class="triangle"></div>
+<span data-count="2" data-type="4">
+Знижки до 40&amp;#37; + 2 акції
+</span>
+<div dish-card-info-dialog="actions">
+<div class="icon info">
+<div class="info-dialog">
+<span>Акції і знижки</span>
+<p>Знижка</p>
+<p>Знижка 10%!</p>
+<p>Знижка 20% до 16:00</p>
+<p>Знижка 20%!</p>
+<p>Знижка 30% до 16:00</p>
+<p>Знижка 40% до 16:00</p>
+<p>До сету &quot;Фуршет&quot;-Пепсі у подарунок!</p>
+<p>Подарунок до сету!</p>
+</div>
+</div>
+</div>
+<div class="right-triangle"></div>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+13:00 - 23:59
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="free">
+Доставка від 0 грн.
+</span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/dabro-hd" class="ui no-underline border-underline solid">Da!Bro Hollywood</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.7 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/dabro-hd">
+<img src="https://assets.misteram.com.ua/misteram-public/dfada3a3100c867ed7ce54913d781299-400x0.png" alt="Da!Bro Hollywood" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item">
+<div class="left">
+<span class="icon menu">
+Меню без націнок
+</span>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 20:30
+</span>
+</div>
+ <div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="no-free">
+Вартість доставки - вiд 45 грн. </span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/avo" class="ui no-underline border-underline solid">AVO</a>
+</div>
+<div class="rait">
+<span class="small-rating">мало оцінок</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/avo">
+<img src="https://assets.misteram.com.ua/misteram-public/aa97242601c385842d8ed48c1ad24fc9-400x0.png" alt="AVO" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item has">
+<div class="discont" data-word-case>
+<div class="triangle"></div>
+<span data-type="1">Замов суші-сет - отримай Fragolino!</span>
+<div dish-card-info-dialog="actions">
+<div class="icon info">
+<div class="info-dialog">
+<span>Акції і знижки</span>
+<p>Замов суші-сет - отримай Fragolino!</p>
+</div>
+</div>
+</div>
+<div class="right-triangle"></div>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 21:00
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="no-free">
+Вартість доставки - вiд 45 грн. </span>
+</span>
+</div>
+<div class="right">
+
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/mafia-cn" class="ui no-underline border-underline solid">Mafia</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.3 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/mafia-cn">
+<img src="https://assets.misteram.com.ua/misteram-public/24c7eefa2e7e5a194ffabd25c7079ae1-400x0.png" alt="Mafia" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item has">
+<div class="discont" data-word-case>
+<div class="triangle"></div>
+<span data-type="2">5 акції</span>
+<div dish-card-info-dialog="actions">
+<div class="icon info">
+<div class="info-dialog">
+<span>Акції і знижки</span>
+<p>До сету &quot;Лосось Мега&quot; - сидр!</p>
+<p>Замов метрову піцу - отримай напій!</p>
+<p>До &quot;Мисливської XXL&quot; - пиво!</p>
+<p>Замов суші-сет - отримай напій!</p>
+<p>До &quot;Філадельфії мікс&quot; - Pepsi!</p>
+</div>
+</div>
+</div>
+<div class="right-triangle"></div>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 23:00
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="free">
+Доставка від 0 грн.
+</span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/georgia" class="ui no-underline border-underline solid">Georgia</a>
+</div>
+<div class="rait">
+ <img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.6 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/georgia">
+<img src="https://assets.misteram.com.ua/misteram-public/22fa5d498900e4c3d5c585309ae208c5-400x0.png" alt="Georgia" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item">
+<div class="left">
+<span class="icon menu">
+Меню без націнок
+</span>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 22:30
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+<span class="no-free">
+Вартість доставки - вiд 45 грн. </span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="company company-static">
+<div class="head">
+<div class="name">
+<a href="/chernigov/burgers-salads" class="ui no-underline border-underline solid">Burgers&amp;Salads</a>
+</div>
+<div class="rait">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span class="small-rating">9.7 / 10</span>
+</div>
+</div>
+<div class="logo">
+<a href="/chernigov/burgers-salads">
+<img src="https://assets.misteram.com.ua/misteram-public/2895b7b6f526537e37c9419c308265ed-400x0.png" alt="Burgers&Salads" onerror="this.src='/images/noimg.gif'" />
+</a>
+</div>
+<div class="sales item">
+<div class="left">
+<span class="icon menu">
+Меню без націнок
+</span>
+</div>
+</div>
+<div class="time item">
+<div class="left">
+<span class="icon clock">
+11:00 - 21:10
+</span>
+</div>
+<div class="right">
+</div>
+</div>
+<div class="delivery item">
+<div class="left">
+<span class="icon car">
+ <span class="no-free">
+Вартість доставки - вiд 45 грн. </span>
+</span>
+</div>
+<div class="right">
+</div>
+</div> </div> <div class="block-1">
+<div class="other-radius-places js-first-nearly" data-standart="Заклади поруч" style="display: none">
+Заклади поруч
+</div> <div class="company js-nearly elem_<% $index %>" company-card data-ng-cloak data-ng-repeat="company in itemsSecond track by $index | orderBy:companiesSortFunc:true">
+<div class="head">
+<div class="name block">
+<a data-ng-if="company.status == 1" href="<% company.urlPath %>" class="ui no-underline border-underline solid"><% company.name %></a>
+<span data-ng-if="company.status == 2 || company.status == 3"><% company.name %></span>
+</div> <div class="rait">
+<span ng-if="company.rating">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span style="color: #7ED035"><% company.rating %></span> <span class="small-rating">/ 10</span>
+</span>
+<span ng-if="!company.rating">
+<span class="small-rating">мало оцінок</span>
+</span>
+</div></div><div class="logo">
+<a href="<% company.urlPath %>" data-ng-if="company.status == 1">
+<img alt="<% company.name %>" image-helper="<% company.image %>" data-image-size="-400x0" data-base-url="https://misteram.com.ua/" />
+</a>
+<img data-ng-if="company.status == 2 || company.status == 3" alt="" image-helper="<% company.image %>" data-image-size="-400x0" data-base-url="https://misteram.com.ua/" />
+</div><div class="sales item" data-ng-if="!isCompanyHasNonDeliveryActions(company) && company.status == 1">
+<div class="left">
+<span class="icon menu">
+Меню без націнок
+</span>
+</div>
+</div>
+<div class="sales item has" data-ng-if="isCompanyHasNonDeliveryActions(company) && company.status == 1">
+<div class="discont" data-word-case>
+<div class="triangle"></div>
+<span data-ng-if="(getCompanyNonDeliveryActions(company)).length == 1">
+<% getAttrByLang(getCompanyNonDeliveryActions(company)[0].translatedAttributes, 'ua', 'title' ) %>
+</span>
+<span data-ng-if="(getCompanyNonDeliveryActions(company)).length > 1 && (getCompanyNonDeliveryActions(company)).length < 5">
+<% getCompanyNonDeliveryActions(company).length %> акції
+</span>
+<span data-ng-if="(getCompanyNonDeliveryActions(company)).length >= 5">
+<% getCompanyNonDeliveryActions(company).length %> акцій
+</span>
+<div dish-card-info-dialog="actions" data-ng-if="(getCompanyNonDeliveryActions(company)).length > 1">
+<div class="icon info">
+<div class="info-dialog">
+<p data-ng-repeat="action in getCompanyNonDeliveryActions(company) track by $index">
+<% getAttrByLang(action.translatedAttributes, 'ua', 'description') %>
+</p>
+</div>
+</div>
+</div>
+<div class="right-triangle"></div>
+</div>
+</div><div class="not-work" data-ng-if="company.status == 2 || company.status == 3">
+<span data-ng-if="company.status == 2">Замовлення тимчасово не приймаються</span>
+<span data-ng-if="company.status == 3">Підключення незабаром!</span>
+</div><div class="time item" data-ng-if="company.status == 1">
+<div class="left">
+<span class="icon clock">
+<% getCompanyWorkTime(company) || "Загрузка..." %>
+</span>
+<span class="bl-online-payment" data-ng-class="company.onlinePaymentActive == true ? 'on' : 'off' " title="Доступна онлайн-оплата"></span>
+<span class="bl-terminal-payment" data-ng-class="company.terminalPaymentActive ? 'on' : 'off'" title="Доступна оплата карткою при отриманні"></span>
+</div>
+<div class="right">
+<div dish-card-info-dialog="workTime">
+<div class="icon info dark">
+<div class="info-dialog">
+<span>Графік роботи</span>
+<p data-ng-show="company.workTime.length == 0">Уууупс...</p>
+<p data-ng-repeat="time in getCompanyAddressesWorkTimes(company, getMainCompanyAddressIndex(company)) track by $index">
+<% calendarDays[$index] %> - <font data-ng-show="time.start && time.end && time.status"><% time.start %> до <% time.end %></font>
+<font data-ng-hide="time.start && time.end && time.status">вихідний</font>
+</p>
+<span class="padding-top-10">Способи оплати</span>
+<p>готівкою при отриманні</p>
+<p data-ng-show="company.onlinePaymentActive == true">карткою онлайн</p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="delivery item" data-ng-if="company.status == 1">
+<div class="left">
+<span class="icon car" data-ng-if="company.isDeliveryAvailable || company.isAggregator">
+<span class="free" data-ng-if="isCompanyHasDeliveryAction(company) && company.deliveryPrice != 0 && !company.deliveryPriceWithCompensation">
+Доставка від 0 грн.
+</span>
+<span class="free" data-ng-if="isCompanyHasDeliveryAction(company) && company.deliveryPrice != 0 && company.deliveryPriceWithCompensation">
+<% getCompanyDeliveryPriceByActionWithCompensationPrice(company) %>
+</span>
+<span class="no-free" data-ng-if="!isCompanyHasDeliveryAction(company) || company.deliveryPrice == 0">
+<span data-ng-if="company.deliveryPrice == 0">
+<% getDeiveryTypeText(company) %> - <% getDeliveryToHomePrice(company) %>
+</span>
+<span data-ng-if="company.deliveryPrice != 0">
+<% getDeiveryTypeText(company) %> - <% getDeliveryToHomePrice(company) %> грн.
+</span>
+</span>
+</span>
+<span data-ng-if="company.isPickUpAvailable && !company.isDeliveryAvailable" class="icon pick-up-icon">
+<span>Тільки самовивіз</span>
+</span>
+<span data-ng-if="company.isBookingAvailable &&
+                         !company.isPickUpAvailable &&
+                         !company.isDeliveryAvailable" class="icon to-table-icon">
+<span>Замовлення в закладі</span>
+</span>
+<span data-ng-if="company.isInnerDeliveryAvailable &&
+                          !company.isBookingAvailable &&
+                          !company.isPickUpAvailable &&
+                          !company.isDeliveryAvailable" class="icon to-room-icon">
+<span>Замовлення в номер</span>
+</span>
+<span data-ng-if="company.isInnerToRoomDeliveryAvailable &&
+                          !company.isInnerDeliveryAvailable &&
+                          !company.isBookingAvailable &&
+                          !company.isPickUpAvailable &&
+                          !company.isDeliveryAvailable" class="icon pre-order-icon">
+<span>Бронювання столика</span>
+</span>
+</div>
+ <div class="right">
+<div dish-card-info-dialog="delivery">
+<div class="icon info dark">
+<div class="info-dialog">
+<div data-ng-if="company.isDeliveryAvailable || company.isAggregator">
+<span>Вартість доставки</span>
+<span style="margin: 0" data-ng-if="company.deliveryPrice == 0">
+<p><b>Доставка до дому</b> - <% getDeliveryToHomePrice(company) %></p>
+</span>
+<span style="margin: 0" data-ng-if="company.deliveryPrice != 0">
+<p><b>Доставка до дому</b> - <% getDeliveryToHomePrice(company) %> грн.</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !company.deliveryPriceWithCompensation">
+<i>
+(Безкоштовно при замовленні від <% getCompanyDeliveryPriceByAction(company) %> грн.
+)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && company.deliveryPriceWithCompensation">
+<i>
+(<% company.deliveryPriceWithCompensation %> грн. при замовленні від
+<% getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+</span>
+<span style="margin: 0" data-ng-if="company.deliveryPrice == 0">
+<p><b>Доставка до дверей</b> - <% getDeliveryToFlatPrice(company) %></p>
+</span>
+<span style="margin: 0" data-ng-if="company.deliveryPrice != 0">
+<p><b>Доставка до дверей</b> - <% getDeliveryToFlatPrice(company) %> грн. </p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !isCompanyHasDeliveryActionFree(company) && company.deliveryAdditionalPrice != 0 && !company.deliveryToDoorPriceWithCompensation">
+<i>
+(<% company.deliveryAdditionalPrice %> грн. при замовленні від
+<% getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !isCompanyHasDeliveryActionFree(company) && company.deliveryAdditionalPrice != 0 && company.deliveryToDoorPriceWithCompensation">
+<i>
+(<% company.deliveryToDoorPriceWithCompensation %> грн. при замовленні від
+<% getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !isCompanyHasDeliveryActionFree(company) && company.deliveryAdditionalPrice == 0 && !company.deliveryToDoorPriceWithCompensation">
+<i>
+(Безкоштовно при замовленні від <% getCompanyDeliveryPriceByAction(company) %> грн.
+)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !isCompanyHasDeliveryActionFree(company) && company.deliveryAdditionalPrice == 0 && company.deliveryToDoorPriceWithCompensation">
+<i>
+(<% company.deliveryToDoorPriceWithCompensation %> грн. при замовленні від
+<% getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+</span>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && isCompanyHasDeliveryActionFree(company) && !company.deliveryToDoorPriceWithCompensation">
+<i>
+(Безкоштовно при замовленні від <% getCompanyDeliveryPriceByAction(company)
+%> грн.)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && isCompanyHasDeliveryActionFree(company) && company.deliveryToDoorPriceWithCompensation">
+<i>
+(<% company.deliveryToDoorPriceWithCompensation
+%> грн. при замовленні від <%
+getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+<p data-ng-if="getCompanySurcharge(company)">
+<b>Доплата за віддалені райони</b> - <% getCompanySurcharge(company) %>
+</p>
+<p data-ng-if="getCompanySurchargeInfo(company)">
+<i><% getCompanySurchargeInfo(company) %></i>
+</p>
+</div>
+<p><b>Самовивіз</b> - <% getDeliveryByHands(company) %></p>
+</div>
+</div>
+</div> </div>
+</div> <% blockOneHeightSet(itemsSecond, $index) %>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+</div>
+<div class="block-2">
+<div class="search-result-label" style="display: none;">
+Результати пошуку
+<span class="clean-search-results">очистити</span>
+</div>
+<div class="search-result-empty" style="display: none;">
+¯\_(ツ)_/¯ На жаль, пошук не дав результатів
+</div> <div class="other-radius-places js-other-radius" data-standart="Заклади на відстані понад 1 км від Вас" style="display: none">
+Заклади на відстані понад 1 км від Вас
+</div>
+<div class="company elem_<% $index %>" company-card data-ng-cloak data-ng-repeat="company in items track by $index | orderBy:companiesSortFunc:true">
+<div class="head">
+<div class="name ">
+<a data-ng-if="company.status == 1" href="<% company.urlPath %>" class="ui no-underline border-underline solid"><% company.name %></a>
+<span data-ng-if="company.status == 2 || company.status == 3"><% company.name %></span>
+</div> <div class="rait">
+<span ng-if="company.rating">
+<img alt="star-rating-icon" src="/images/svg/green-star.svg" width="13" height="13" />
+<span style="color: #7ED035"><% company.rating %></span> <span class="small-rating">/ 10</span>
+</span>
+<span ng-if="!company.rating">
+<span class="small-rating">мало оцінок</span>
+</span>
+</div></div><div class="logo">
+<a href="<% company.urlPath %>" data-ng-if="company.status == 1">
+<img alt="<% company.name %>" image-helper="<% company.image %>" data-image-size="-400x0" data-base-url="https://misteram.com.ua/" />
+</a>
+<img data-ng-if="company.status == 2 || company.status == 3" alt="" image-helper="<% company.image %>" data-image-size="-400x0" data-base-url="https://misteram.com.ua/" />
+</div><div class="sales item" data-ng-if="!isCompanyHasNonDeliveryActions(company) && company.status == 1">
+<div class="left">
+<span class="icon menu">
+Меню без націнок
+</span>
+</div>
+</div>
+<div class="sales item has" data-ng-if="isCompanyHasNonDeliveryActions(company) && company.status == 1">
+<div class="discont" data-word-case>
+<div class="triangle"></div>
+<span data-ng-if="(getCompanyNonDeliveryActions(company)).length == 1">
+<% getAttrByLang(getCompanyNonDeliveryActions(company)[0].translatedAttributes, 'ua', 'title' ) %>
+</span>
+<span data-ng-if="(getCompanyNonDeliveryActions(company)).length > 1 && (getCompanyNonDeliveryActions(company)).length < 5">
+<% getCompanyNonDeliveryActions(company).length %> акції
+</span>
+<span data-ng-if="(getCompanyNonDeliveryActions(company)).length >= 5">
+<% getCompanyNonDeliveryActions(company).length %> акцій
+</span>
+<div dish-card-info-dialog="actions" data-ng-if="(getCompanyNonDeliveryActions(company)).length > 1">
+<div class="icon info">
+<div class="info-dialog">
+<p data-ng-repeat="action in getCompanyNonDeliveryActions(company) track by $index">
+<% getAttrByLang(action.translatedAttributes, 'ua', 'description') %>
+</p>
+</div>
+</div>
+</div>
+<div class="right-triangle"></div>
+</div>
+</div><div class="not-work" data-ng-if="company.status == 2 || company.status == 3">
+<span data-ng-if="company.status == 2">Замовлення тимчасово не приймаються</span>
+<span data-ng-if="company.status == 3">Підключення незабаром!</span>
+</div><div class="time item" data-ng-if="company.status == 1">
+<div class="left">
+<span class="icon clock">
+<% getCompanyWorkTime(company) || "Загрузка..." %>
+</span>
+<span class="bl-online-payment" data-ng-class="company.onlinePaymentActive == true ? 'on' : 'off' " title="Доступна онлайн-оплата"></span>
+<span class="bl-terminal-payment" data-ng-class="company.terminalPaymentActive ? 'on' : 'off'" title="Доступна оплата карткою при отриманні"></span>
+</div>
+<div class="right">
+<div dish-card-info-dialog="workTime">
+<div class="icon info dark">
+<div class="info-dialog">
+<span>Графік роботи</span>
+<p data-ng-show="company.workTime.length == 0">Уууупс...</p>
+<p data-ng-repeat="time in getCompanyAddressesWorkTimes(company, getMainCompanyAddressIndex(company)) track by $index">
+<% calendarDays[$index] %> - <font data-ng-show="time.start && time.end && time.status"><% time.start %> до <% time.end %></font>
+<font data-ng-hide="time.start && time.end && time.status">вихідний</font>
+</p>
+<span class="padding-top-10">Способи оплати</span>
+<p>готівкою при отриманні</p>
+<p data-ng-show="company.onlinePaymentActive == true">карткою онлайн</p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="delivery item" data-ng-if="company.status == 1">
+<div class="left">
+<span class="icon car" data-ng-if="company.isDeliveryAvailable || company.isAggregator">
+<span class="free" data-ng-if="isCompanyHasDeliveryAction(company) && company.deliveryPrice != 0 && !company.deliveryPriceWithCompensation">
+Доставка від 0 грн.
+</span>
+<span class="free" data-ng-if="isCompanyHasDeliveryAction(company) && company.deliveryPrice != 0 && company.deliveryPriceWithCompensation">
+<% getCompanyDeliveryPriceByActionWithCompensationPrice(company) %>
+</span>
+<span class="no-free" data-ng-if="!isCompanyHasDeliveryAction(company) || company.deliveryPrice == 0">
+<span data-ng-if="company.deliveryPrice == 0">
+<% getDeiveryTypeText(company) %> - <% getDeliveryToHomePrice(company) %>
+</span>
+<span data-ng-if="company.deliveryPrice != 0">
+<% getDeiveryTypeText(company) %> - <% getDeliveryToHomePrice(company) %> грн.
+</span>
+</span>
+</span>
+<span data-ng-if="company.isPickUpAvailable && !company.isDeliveryAvailable" class="icon pick-up-icon">
+<span>Тільки самовивіз</span>
+</span>
+<span data-ng-if="company.isBookingAvailable &&
+                         !company.isPickUpAvailable &&
+                         !company.isDeliveryAvailable" class="icon to-table-icon">
+<span>Замовлення в закладі</span>
+</span>
+<span data-ng-if="company.isInnerDeliveryAvailable &&
+                          !company.isBookingAvailable &&
+                          !company.isPickUpAvailable &&
+                          !company.isDeliveryAvailable" class="icon to-room-icon">
+<span>Замовлення в номер</span>
+</span>
+<span data-ng-if="company.isInnerToRoomDeliveryAvailable &&
+                          !company.isInnerDeliveryAvailable &&
+                          !company.isBookingAvailable &&
+                          !company.isPickUpAvailable &&
+                          !company.isDeliveryAvailable" class="icon pre-order-icon">
+<span>Бронювання столика</span>
+</span>
+</div>
+<div class="right">
+<div dish-card-info-dialog="delivery">
+<div class="icon info dark">
+<div class="info-dialog">
+<div data-ng-if="company.isDeliveryAvailable || company.isAggregator">
+<span>Вартість доставки</span>
+<span style="margin: 0" data-ng-if="company.deliveryPrice == 0">
+<p><b>Доставка до дому</b> - <% getDeliveryToHomePrice(company) %></p>
+</span>
+<span style="margin: 0" data-ng-if="company.deliveryPrice != 0">
+<p><b>Доставка до дому</b> - <% getDeliveryToHomePrice(company) %> грн.</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !company.deliveryPriceWithCompensation">
+<i>
+(Безкоштовно при замовленні від <% getCompanyDeliveryPriceByAction(company) %> грн.
+)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && company.deliveryPriceWithCompensation">
+<i>
+(<% company.deliveryPriceWithCompensation %> грн. при замовленні від
+<% getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+</span>
+<span style="margin: 0" data-ng-if="company.deliveryPrice == 0">
+<p><b>Доставка до дверей</b> - <% getDeliveryToFlatPrice(company) %></p>
+</span>
+<span style="margin: 0" data-ng-if="company.deliveryPrice != 0">
+<p><b>Доставка до дверей</b> - <% getDeliveryToFlatPrice(company) %> грн. </p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !isCompanyHasDeliveryActionFree(company) && company.deliveryAdditionalPrice != 0 && !company.deliveryToDoorPriceWithCompensation">
+<i>
+(<% company.deliveryAdditionalPrice %> грн. при замовленні від
+<% getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !isCompanyHasDeliveryActionFree(company) && company.deliveryAdditionalPrice != 0 && company.deliveryToDoorPriceWithCompensation">
+<i>
+(<% company.deliveryToDoorPriceWithCompensation %> грн. при замовленні від
+<% getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !isCompanyHasDeliveryActionFree(company) && company.deliveryAdditionalPrice == 0 && !company.deliveryToDoorPriceWithCompensation">
+<i>
+(Безкоштовно при замовленні від <% getCompanyDeliveryPriceByAction(company) %> грн.
+)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && !isCompanyHasDeliveryActionFree(company) && company.deliveryAdditionalPrice == 0 && company.deliveryToDoorPriceWithCompensation">
+<i>
+(<% company.deliveryToDoorPriceWithCompensation %> грн. при замовленні від
+<% getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+</span>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && isCompanyHasDeliveryActionFree(company) && !company.deliveryToDoorPriceWithCompensation">
+<i>
+(Безкоштовно при замовленні від <% getCompanyDeliveryPriceByAction(company)
+%> грн.)
+</i>
+</p>
+<p data-ng-if="isCompanyHasDeliveryAction(company) && isCompanyHasDeliveryActionFree(company) && company.deliveryToDoorPriceWithCompensation">
+<i>
+(<% company.deliveryToDoorPriceWithCompensation
+%> грн. при замовленні від <%
+getCompanyDeliveryPriceByAction(company) %> грн.)
+</i>
+</p>
+<p data-ng-if="getCompanySurcharge(company)">
+<b>Доплата за віддалені райони</b> - <% getCompanySurcharge(company) %>
+</p>
+<p data-ng-if="getCompanySurchargeInfo(company)">
+<i><% getCompanySurchargeInfo(company) %></i>
+</p>
+</div>
+<p><b>Самовивіз</b> - <% getDeliveryByHands(company) %></p>
+</div>
+</div>
+</div> </div>
+</div> <% blockTwoHeightSet(items, $index) %>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+<div data-ng-show="loading" class="company is-loading">
+<div class="head"></div>
+<div class="logo">
+<img src="https://misteram.com.ua/images/card-loading-image-white.jpg" alt="" />
+<div class='loading'></div>
+</div>
+<div class="bottom">
+<div class="field"></div>
+<div class="field"></div>
+<div class="field"></div>
+</div>
+</div>
+</div>
+<div class="wrapper-footer-install-app">
+<div class="bl-payment-system">
+<img src="/images/vmc@2x-saas.png" alt="" width="210" height="32">
+</div>
+<div class="bl-footer-text-app">
+<p class="title-app-text">Наш додаток</p>
+<p>Замовляйте зручніше!</p>
+</div>
+<div class="wr-bl-app">
+<div class="bl-link-apps">
+<a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=am.mister.misteram&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dmainpage%26utm_campaign%3Dglobalm" class="app-androind">
+<img src="/images/store_android@2x.png" alt="Завантажити на Google play" width="112" height="42">
+</a>
+<a target="_blank" rel="noopener" href="https://itunes.apple.com/app/apple-store/id1198008481?pt=118545319&amp;ct=website_mainpage&amp;mt=8" class="app-ios">
+<img src="/images/store_ios@2x.png" alt="Завантажити на App Store" width="112" height="42">
+</a>
+</div>
+</div>
+</div><div class="footer__seo-text">
+<div class="footer-menu footer-widescreen">
+<div class="links">
+<span class="icon-social-wrap">
+<a href="/chernigov/promotions" class="discount icon">%</a>
+</span>
+<a href="/chernigov/promotions">Акції</a>
+<a href="//misteram.com.ua/rules" target="_blank" class="footer-rules-link">Правила</a>
+</div> <div class="social">
+<span class="icon-social-wrap">
+<a href="https://instagram.com/mister.am.chernihiv" class="instagram">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="icon">
+<title>instagram</title>
+<path d="M13.994 1.458c-0.086-0.834-0.777-1.458-1.616-1.458-3.584 0-7.167 0-10.751 0.001-0.098 0-0.198 0.007-0.293 0.026-0.794 0.152-1.333 0.808-1.333 1.616 0 1.786 0 3.573 0 5.359 0 1.783 0 3.566 0.001 5.349 0 0.091 0.007 0.182 0.018 0.273 0.104 0.775 0.793 1.376 1.576 1.377 3.603 0 7.207 0 10.81-0 0.062 0 0.123-0.004 0.185-0.010 0.792-0.093 1.407-0.784 1.407-1.581 0.001-3.604 0.001-7.208 0-10.811 0.001-0.047 0.002-0.093-0.005-0.139zM7 4.309c1.488-0 2.691 1.202 2.693 2.691s-1.2 2.692-2.689 2.693c-1.491 0-2.697-1.205-2.695-2.695 0.002-1.484 1.207-2.689 2.691-2.689zM12.388 5.998c0 1.933 0 3.867 0 5.801 0 0.364-0.221 0.588-0.586 0.588-2.991 0-5.982 0-8.973 0-0.215 0-0.429 0-0.645 0-0.337-0-0.566-0.23-0.566-0.567-0-1.943 0-3.885 0-5.829 0-0.019 0-0.039 0-0.062 0.407 0 0.809 0 1.215 0-0.272 1.097-0.147 2.146 0.39 3.139 0.392 0.724 0.955 1.287 1.673 1.693 1.417 0.8 3.18 0.724 4.529-0.198 0.749-0.512 1.287-1.193 1.608-2.042 0.319-0.847 0.361-1.711 0.138-2.594 0.407 0 0.808 0 1.217 0 0.001 0.024 0.001 0.047 0.001 0.070zM12.388 3.758c-0.001 0.318-0.235 0.55-0.555 0.551-0.004 0-0.009 0-0.011 0-0.259 0-0.52 0-0.781 0-0.266 0-0.532 0-0.798-0-0.307 0-0.545-0.229-0.547-0.536-0.004-0.54-0.004-1.079 0-1.618 0.002-0.31 0.239-0.537 0.551-0.538 0.531-0 1.061-0 1.591 0 0.314 0 0.55 0.234 0.55 0.55 0 0.531 0 1.061-0 1.591z"></path>
+</svg>
+</a>
+</span>
+<span class="icon-social-wrap">
+<a href="https://www.facebook.com/mister.am.chernihiv" class="facebook">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="icon">
+<title>facebook</title>
+<path d="M5.145 2.711c0 0.353 0 1.928 0 1.928h-1.412v2.357h1.412v7.004h2.901v-7.004h1.947c0 0 0.182-1.13 0.271-2.366-0.253 0-2.206 0-2.206 0s0-1.371 0-1.612c0-0.241 0.316-0.565 0.629-0.565s0.971 0 1.581 0c0-0.321 0-1.43 0-2.454-0.814 0-1.741 0-2.149 0-3.044-0-2.972 2.359-2.972 2.711z"></path>
+</svg>
+</a>
+</span>
+<div class="caption">Ми в соціальних мережах:</div>
+</div> </div></div>
+<div class="category-seo-text">
+<p><b>Мистер Ам приветствует вас на странице максимально удобного сервиса доставки еды!</b><br>
+Заказ еды на дом Чернигов осуществляет в лучших ресторанах города. Практически в любое время. С раннего утра и до самого позднего вечера. Это очень удобная услуга. У почитателей красивых и вкусных блюд появился настоящий преданный помощник. Это я! Благодаря простой и удобной навигации формировать заказ легко и просто. Выбор ресторана и сегодняшнего блюда занимает всего несколько минут. Важное преимущество сервиса – бесплатная доставка обедов. Во многих случаях, но не всегда. Все зависит от ресторана. Однако получить такую дополнительную скидку очень приятно. Есть еще одна не менее привлекательная особенность использования сервиса. Представленные в каталоге заведения реализуют еду напитки без наценки. Удобная, оперативная и выгодная доставка еды в Чернигове к вашим услугам!<br><br>
+<b>Как оформить заказ</b><br>
+Наполнить свой список заказов понравившимися блюдами – просто. Вы нажимаете на кнопку «Показать рестораны». Выбираете название заведения из общего списка и кликаете по изображению логотипа. Находите любимую еду. Зеленая «кнопка» с плюсиком – это опция «Выбрать». Под каждым изображением блюда, кроме цены, указан вес. Часто, кликнув на названии, вы сможете увидеть список ингредиентов. Это удобно и практично: вам всегда известно, из чего приготовлен ваш сытный обед или изысканный ужин. На сайте доступен заказ из ресторанов, которые пользуются наибольшей популярностью у посетителей. Бывали не во всех? Исправьте ситуацию прямо сейчас. Закажите понравившееся блюдо с помощью этого сервиса. Оптимально удобный заказ еды с доставкой теперь доступен и в вашем городе!<br><br>
+<b>Заказ еды онлайн</b><br>
+Новые вкусы, новые впечатления, новые пристрастия. Вкусная еда – это страсть. Это сильные эмоции и неповторимое гастрономическое удовольствие. Используйте возможность открывать для себя новые вкусные блюда, не выходя из дома! Заказать еду онлайн очень удобно в офис. Не секрет, что у многих нет возможности добраться до любимого ресторана или кафе в обеденный перерыв. Время ограничено. А у кого-то и вовсе нет возможности выйти на обед. Брать бутерброды или другую еду из дома тоже заведено не у всех. В этом случае заказ еды с доставкой – волшебная палочка-выручалочка. Во-первых, это удобно: 2-3 минуты и заказ оформлен. Во-вторых, это выгодно, так не нужно тратиться на такси. В-третьих, это вкусно! Блюда доставляются еще теплыми к назначенному времени. Вы быстро заказываете то, что хочется отведать именно сегодня. Рассчитываетесь с курьером по доставке. Наслаждаетесь вкусным блюдом, приготовленным лучшими поварами города. Удобно. Выгодно. Вкусно. Большим подспорьем является заказ еды в офис или на предприятие по торжественному случаю. Хотите угостить коллег отменным шашлыком и вкуснейшими салатами по случаю своего дня рождения? Воспользуйтесь услугами нашего сервиса. Ваши сослуживцы непременно останутся довольны угощением. А вы сэкономите силы и время. А при бесплатной доставке – еще и средства. <br>
+К тому же вкусная еда на дом или в офис доставляется оперативно. Планируйте свой день, не опасаясь томительного ожидания.<br><br>
+<b>Еда из лучших ресторанов</b><br>
+Доставка еды на дом посредством этого сервиса осуществляется из лучших ресторанов города. Завсегдатаи ресторана «Сан Сити», расположенного в живописном месте одного из спальных районов, могут многое рассказать об уютной обстановке заведения. Но не только. Главное – меню! Здесь готовят изысканные блюда. Телятина с вишнёво-гранатовым соусом, медальоны из свинины в беконе жареные на гриле, куриные брошеты в горчично-медовом маринаде и кунжуте. Это не просто вкусная еда. Это красивая еда. Мечта гурмана! Душевный ресторан «Велюров» – излюбленное место встречи добрых друзей. Здесь можно заказать теплый салат с телятиной и лесными грибами, дорадо, приготовленную по особому рецепту. И, конечно, выбрать любимые роллы. Ценители японской кухни давно оценили качество «Окинава», особый аромат «Унаги Филадельфия» и др. Ресторан «Колыба» – это вкусная национальная кухня и неповторимый украинский колорит. Здесь готовят то, чего нет в других ресторанах. Фавориты меню – блюда из печи. Ароматный наваристый борщ, вкуснейший домашний рассольник, изумительная картошечка с мясом. Это удивительно вкусно. А также домашняя колбаса из печи подчеревок, деруны – пальчики оближешь!<br><br>
+<b>Удобно. Быстро. Вкусно</b><br>
+Использовать сервис совсем несложно: вы выбираете знакомый ресторан или кликаете по картинке с новым интригующим названием заведения, выбираете блюда, «отправляете» их в список «Мой заказ», сразу подтверждаете выбор или после добавления в заказ напитка, получаете sms-подтверждение о том, что ваша заявка принята в работу, спешите открывать двери курьеру, который очень быстро доставил еду, оплачиваете заказ, наслаждаетесь вкусом и ароматом искусно приготовленного блюда.<br><br>
+Mister.am – это джентльменская доставка еды на дом. Желаем вам приятного аппетита!<br></p>
+<div class="footer-menu__powered">
+<div class="powered-by-section">
+<span class="img-wrap">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="332px" height="100px" viewBox="0 0 332 100">
+<g>
+<path fill="#FFFFFF" d="M63.6,0h-0.3c-6.9,0-12.5,5.6-12.5,12.5v49.4c0,7.2-5.5,12.8-12.5,12.8c-7,0-12.6-5.7-12.6-12.8
+                    c0-2.2,0.5-4.3,1.5-6.3c1.7-3.4,4.9-5.6,8.6-6.3c5.8-1.2,10.1-6.3,10.1-12.4c0-2.6-0.8-5-2.2-7.1c-2.9-4.3-8.2-6.2-13.2-5.1
+                    C13.4,28.6,0.4,43.7,0.4,61.9c0,21,17,38.1,37.9,38.1c20.8,0,37.7-17.1,37.7-38.1V12.5C76.1,5.6,70.5,0,63.6,0z" />
+<path fill="#FFFFFF" d="M125.1,24.4c-20.9,0-37.8,17-37.8,37.8s17,37.8,37.8,37.8c20.9,0,37.8-17,37.8-37.8S146,24.4,125.1,24.4z
+                     M125.1,74.7c-6.9,0-12.6-5.6-12.6-12.6s5.6-12.6,12.6-12.6c6.9,0,12.6,5.6,12.6,12.6S132,74.7,125.1,74.7z" />
+<path fill="#FFFFFF" d="M212.2,26.6h-12.5V12.5c0-6.9-5.8-12.2-12.7-12.2h-0.3c-6.9,0-12.3,5.3-12.3,12.2v48.2
+                    c0,3.4-0.1,15.6,8.9,25.4c4.8,5.2,13.6,11.5,41.7,11.5V72.3c-15.5,0-20.6-0.6-23.1-3.2c-2.3-2.4-2.3-6.3-2.3-7l0.1-0.2v-6.4v-3.6
+                    h12.5c6.9,0,12.8-5.5,12.8-12.4v-0.3C225,32.3,219.2,26.6,212.2,26.6z" />
+<path fill="#FFFFFF" d="M282.4,26.4c-4.2,0-16.8-0.2-25.8,7.5c-5.1,4.3-11,12.6-11,27.4c0,5.5-1.9,7.3-2.5,7.8
+                    c-4.1,3.5-12.7,3.3-12.7,3.3v25.2c0.4,0,1.2,0,1.8,0c5.7,0,18.4-1.1,28-9.9c4.9-4.5,10.9-12.7,10.7-26.5c0-1.9-0.4-5.6,2.2-8
+                    c2.6-2.5,7.9-1.6,9.4-1.6c7,0,12.6-5.7,12.6-12.6S289.4,26.4,282.4,26.4z" />
+<circle fill="#FFFFFF" cx="318.9" cy="39.1" r="12.6" />
+</g>
+</svg>
+</span>
+<p>Powered by <a href=https://dotsplatform.com/?utm_source=ma&amp;utm_medium=link&amp;utm_campaign=accounts_website>Dots Platform</a></p>
+</div></div></div>
+<div id="ngdialog-android-app" class="ngdialog ng-dialog-clear-basket ng-scope js-ngdialog" style="display: none;">
+<div class="ngdialog-overlay-paused"></div>
+<div class="ngdialog-content text-center">
+<div class="dialog clear-basket">
+<div class="title bg-blue">Встановіть наш додаток</div>
+<div class="content">
+<p class="text-center">Замовляйте страви ще швидше та зручніше. Спробуйте прямо зараз!</p>
+<a target="_blank" href="https://play.google.com/store/apps/details?id=am.mister.misteram&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dmainpage%26utm_campaign%3Dglobalm" class="app-androind js-ngdialog-confirm">
+<img src="/images/store_android@2x.png" alt="Завантажити на Google play" width="160" height="60">
+</a>
+</div>
+<div class="buttons">
+<a href="#" class="pop-up-btn-close js-ngdialog-close">Ні, дякую</a>
+</div>
+</div>
+<div class="ngdialog-close"></div>
+</div>
+</div> <div id="ngdialog-ios-app" class="ngdialog ng-dialog-clear-basket ng-scope js-ngdialog" style="display: none;">
+<div class="ngdialog-overlay-paused"></div>
+<div class="ngdialog-content text-center">
+<div class="dialog clear-basket">
+<div class="title bg-blue">Встановіть наш додаток</div>
+<div class="content">
+<p class="text-center">Замовляйте страви ще швидше та зручніше. Спробуйте прямо зараз!</p>
+<a target="_blank" rel="noopener" href="https://itunes.apple.com/app/apple-store/id1198008481?pt=118545319&amp;ct=website_mainpage&amp;mt=8" class="app-ios js-ngdialog-confirm">
+<img src="/images/store_ios@2x.png" alt="Завантажити на App Store" width="160" height="60">
+</a>
+</div>
+<div class="buttons">
+<a href="#" class="pop-up-btn-close js-ngdialog-close">Ні, дякую</a>
+</div>
+</div>
+<div class="ngdialog-close"></div>
+</div>
+</div> <div id="ngdialog-new-android-app" class="ngdialog ng-dialog-clear-basket ng-scope js-ngdialog" style="display: none;">
+<div class="ngdialog-overlay-paused"></div>
+<div class="ngdialog-content text-center">
+<div class="dialog clear-basket">
+<div class="title bg-blue">Встановіть наш додаток</div>
+<div class="content">
+<p class="text-center">Будь ласка, оновіть свій додаток. Нова версія набагато швидше і зручніше!</p>
+<a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=am.mister.misteram&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dmainpage%26utm_campaign%3Dglobalm" class="app-androind js-ngdialog-confirm">
+<img src="/images/store_android@2x.png" alt="Завантажити на Google play" width="160" height="60">
+</a>
+</div>
+<div class="buttons">
+<a href="#" class="pop-up-btn-close js-ngdialog-close">Ні, дякую</a>
+</div>
+</div>
+<div class="ngdialog-close"></div>
+</div>
+</div>
+<div id="ngdialog11" class="ngdialog ng-dialog-clear-basket ng-scope" style="display:none;">
+<div class="ngdialog-overlay"></div>
+<div class="ngdialog-content">
+<div class="dialog clear-basket">
+<div class="title">Де Ви зараз?</div>
+<div class="content clear">
+<div class="dropdown js mobile popup-city-choose-address main-page-popup-city-choose-address js-address-popup">
+<select>
+<option data-city_center="51.4982,31.2893499" data-city_id="1" data-href="/chernigov" selected>Чернігів</option>
+<option data-city_center="49.233083,28.4682169" data-city_id="16" data-href="/vinnytsia">Вінниця</option>
+<option data-city_center="50.25465,28.6586669" data-city_id="10" data-href="/zhytomyr">Житомир</option>
+<option data-city_center="48.922633,24.711117" data-city_id="6" data-href="/frankivsk">Івано-Франківськ</option>
+<option data-city_center="49.065783,33.410033" data-city_id="13" data-href="/kremenchug">Кременчук</option>
+<option data-city_center="48.507933,32.262317" data-city_id="15" data-href="/kropyvnytsky">Кропивницький</option>
+<option data-city_center="50.747233,25.325383" data-city_id="21" data-href="/lutsk">Луцьк</option>
+<option data-city_center="49.588267,34.5514169" data-city_id="17" data-href="/poltava">Полтава</option>
+<option data-city_center="50.6199,26.251617" data-city_id="14" data-href="/rivne">Рівне</option>
+<option data-city_center="50.9077,34.7981" data-city_id="4" data-href="/sumy">Суми</option>
+<option data-city_center="46.635417,32.616867" data-city_id="19" data-href="/kherson">Херсон</option>
+<option data-city_center="49.422983,26.9871331" data-city_id="7" data-href="/khmelnytsky">Хмельницький</option>
+<option data-city_center="49.444433,32.059767" data-city_id="11" data-href="/cherkassy">Черкаси</option>
+<option data-city_center="48.2920787,25.9358367" data-city_id="18" data-href="/chernivtsi">Чернівці</option>
+</select>
+</div>
+<input type="text" data-first-radius="1" data-city-center="51.4982,31.2893499" data-city_id="1" data-city="Чернигов" name="set-address" value="" id="set-address" class="js-set-address input-set-city-dialog main-page-popup-city" placeholder="Вкажіть адресу" />
+</div>
+<div class="buttons">
+<input type="button" value="Назад" class="close btn ">
+<input type="submit" value="OK" class="confirm btn js-add-address">
+<div class="checkout-ajax-loader-popup">
+<img src="https://misteram.com.ua/images/checkout_loading.gif" />
+</div>
+</div>
+</div>
+<div class="ngdialog-close"></div>
+</div>
+</div> </div>
+</section>
+<div class="basket-wrap">
+<div class="basket" basket>
+<div class="meals-count">
+<p><em><span class="count-basket"><% count %></span> <% getText(count, ['dish1', 'dish2', 'dish3']) | translate %> /
+<span class="price-basket"><% price %></span> ГРН.</em></p>
+</div>
+<div class="meals-btn">
+<a href="//misteram.com.ua/ua/chernigov/cart">
+<button type="submit" data-site-navigation>МОЄ ЗАМОВЛЕННЯ</button>
+</a>
+</div>
+</div>
+</div> </div>
+<script src="https://misteram.com.ua/js/app.js?v=186"></script>
+<script>
+        function setCookie(key, value, days) {
+            var expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = key + '=' + value + ';path=/;expires=' + expires.toUTCString();
+        }
+
+        function getCookie(key, defaultValue) {
+            defaultValue = defaultValue === undefined ? null : defaultValue;
+            var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+            return keyValue ? keyValue[2] : defaultValue;
+        }
+
+        var $allPlaces = $(".js-all-places");
+        if ($allPlaces.length > 0 && $(window).width() <= 929) {
+            $.trim($allPlaces.text($.trim($allPlaces.text()).split(" ")[0]));
+        }
+    </script>
+<script type="text/javascript" src="/js/app-install-popups.js?v=186"></script>
+<script>
+  var ie = (function () {
+
+    var undef,
+      v = 3,
+      div = document.createElement('div'),
+      all = div.getElementsByTagName('i');
+
+    while (
+      div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+        all[0]
+      ) ;
+
+    return v > 4 ? v : undef;
+
+  }());
+
+  if (ie < 9) {
+    window.location.href = "/update-browser";
+  }
+</script>
+<script>
+    $(document).ready(function() {
+        var LANDING_SITE_COOKIES_HOUR = 12;
+        var query = window.location.search;
+        var isFromOwnLanding = getQueryParamByKey(query, 'own-landing');
+        var companyIdFromQuery = getQueryParamByKey(query, 'id');
+        var companyId = $('.container').data('company_id');
+        var companyIdFromCookie = +getCookie('fromOwnLanding');
+        var misteramLogo = $('.js-logo');
+        var companyLogo = $('.js-logo-own');
+        var companyFavicon = $('.js-landing-favicon').data('landingFavicon');
+        var footerSimilarCompanies = $('.js-footer-similar-companies');
+
+        if(isNeedToShowCompanyLogo()) {
+            changeFavicon(companyFavicon);
+            changePhone();
+            footerSimilarCompanies.hide();
+            misteramLogo.hide();
+            companyLogo.css('display', 'block');
+        } else {
+            misteramLogo.css('display', 'block');
+        }
+
+        function isNeedToShowCompanyLogo() {
+            if(companyIdFromCookie === companyId) {
+                return true;
+            }
+
+            if(!companyIdFromCookie && isFromOwnLanding) {
+                setCookie('fromOwnLanding', companyIdFromQuery, LANDING_SITE_COOKIES_HOUR);
+                return true;
+            }
+
+            return false;
+        }
+
+        function getCookie(name) {
+            var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, hours) {
+            var d = new Date;
+            d.setTime(d.getTime() + 60*60*1000*hours);
+            document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+        }
+
+        function getQueryParamByKey(paramsString, key) {
+            if(!paramsString.length || !key.length) {
+                return false;
+            }
+
+            var res = false;
+
+            var paramsArray = paramsString
+                .substr(1)
+                .split('&');
+
+            paramsArray.forEach(function (value) {
+                var param = value.split('=');
+
+                if(param[0] === key) res = param[1];
+            });
+
+            return res;
+        }
+
+        function changeFavicon(img) {
+            var favicon = $('link[rel="shortcut icon"]');
+
+            if (!favicon) {
+                favicon = document.createElement('link');
+                favicon.attr('rel', 'shortcut icon');
+                var head = $('head');
+                head.append(favicon);
+            }
+
+            favicon.attr('type', 'image/png');
+            favicon.attr('href', img);
+        }
+
+        function changePhone() {
+            var $headerCityPhone = $('.js-header-phone-city');
+            var $headerCompanyPhone = $('.js-header-phone-company');
+            if (!$headerCompanyPhone.length) {
+              return;
+            }
+            $headerCityPhone.hide();
+            $headerCompanyPhone.show();
+        }
+    })
+</script>
+<script>
+    $(function () {
+        var chatraUserInfo = {};
+        var chatraClientID = '';
+                        if($("html").attr('lang') == 'ua'){
+            window.ChatraSetup = {
+                startHidden: true,
+                clientId: chatraClientID,
+                language: 'ru',
+                locale: {
+                    "chat": { "input": {"placeholder": {"ru": "Написати повідомлення..."}},"button": {"ru": "Відправити"},"introduce": {"ru": "Будь ласка, введіть дані:"}},
+                    "customStrings": {"preform_start": {"ru": "Будь ласка, введіть дані:"},"preform_after": {"ru": "Дякуємо!"},"preform_start_after": {"ru": "Дякуємо!"}, "chatWithUs": {"ru": "Напишіть нам, ми онлайн!"}, "welcome": {"ru": "Будемо раді допомогти!"}, "leaveUsAMessage": {"ru": "Напишіть нам"}, "offlineNote": {"ru": "Задайте питання - ми відповімо на пошту, або тут."},                 "preform_delay": {"ru": "На жаль, ми не встигаємо відповісти просто зараз. Будь ласка, залиште свою пошту - ми обов'язково зв'яжемося в Вами!"},"button": {"ru": "Відпр."}},
+                    "name": {"ru": "Ім'я","your": {"ru": "Ваше iм'я"}},
+                    "save": {"ru": "Зберегти"},
+                    "change": {"ru": "Змінити"},
+                    "typing": {"ru": "друкує"},
+                    "areTyping": {"ru": "друкує"},
+                    "messageSrut": {"ru": "Повідомлення надіслано"},
+                    "active": {"ru": "Активний","short": {"ru": "Активність: менше години тому"},"long": {"ru": "Активність: більше години тому"}},
+                    "notSeru": {"ru": "не прочитано"},
+                    "seru": {"ru": "прочитано"},
+                    "send" : {"ru" : "доставлено"},
+                    "sending" : {"ru" : "відправляю"},
+                    "unsent" : {"ru" : "увійдіть в, щоб відправити"},
+                    "notSeen" : {"ru" : "не переглянуто"},
+                    "seen" : {"ru" : "переглянуто"},
+                    "date": {"month": {"full": {"ru": "Січень_Лютий_Березень_Квітень_Травень_Червень_Липень_Серпень_Вересень_Жовтень_Листопад_Грудень"}},
+                        "momrut": {"ru": "нещодавно"},
+                        "minute": {"ru": "\{\{#count\}\} хв. томy"},
+                        "hour": {"ru": "\{\{#count\}\} год. тому"},
+                        "day": {"ru": "\{\{#count\}\} дн. тому"},
+                        "today": {"ru": "Сьогодні"},
+                        "yesterday": {"ru": "Вчора"}},
+                    "email": {"ru": "Електронна пошта"},
+                    "cancel": {"ru": "Відмінити"},
+                    "messageTypes": {"joinedFirst": {"ru": "приєдналася до чату"}, "joined": {"ru": "\{\{#username\}\} приєдналася до чату"}, "agrutsOffline": {"ru": "оператор оффлайн"}}
+                }
+
+            };
+
+        } else {
+            window.ChatraSetup = {
+                startHidden: true,
+                clientId: chatraClientID
+            };
+        }
+
+        window.ChatraIntegration = chatraUserInfo;
+
+        ChatraID = 'TnRrEsLN8MwSRJFRL';
+        (function(d, w, c) {
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+                + '//call.chatra.io/chatra.js';
+            n.parentNode.insertBefore(s, n);
+        })(document, window, 'Chatra');
+
+
+        var chartaChatStatus = getCookie('chartaChatStatus') || 0;
+        var chartaChatStatusTimeout = getCookie('chartaChatStatusTimeout') || 0;
+
+        Chatra('hide', true);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            setTimeout(function(){
+                $("#chatra").css("display", "none");
+            }, 2500);
+        }
+        $('#custom-chatra-button').on('click', function(e) {
+            e.preventDefault();
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                Chatra('show', true);
+                Chatra('openChat', true);
+                $("#chatra").show();
+            }else {
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active');
+                    Chatra('hide', true);
+                    setCookie('chartaChatStatus', 1, 1000);
+                }else {
+                    $(this).addClass('active');
+                    setCookie('chartaChatStatus', 1, 1000);
+                    Chatra('show', true);
+                    Chatra('expandWidget', true);
+                }
+            }
+
+
+        });
+        $(window).on('message', function (event) {
+            if(event.originalEvent != undefined && event.originalEvent.data != undefined ){
+                try {
+                    message = JSON.parse(event.originalEvent.data);
+                    if (message.sender === 'Chatra' && message.type === 'collapseWindow') {
+                        Chatra('hide', true);
+                        setCookie('chartaChatStatus', 0, 1000);
+                        $("#custom-chatra-button").removeClass('active');
+                    }
+                } catch(e){
+
+                }
+
+            }
+        });
+
+        if(chartaChatStatus == 1){
+            Chatra('show', true);
+            Chatra('expandWidget', true);
+        }
+        var countOperatorsOnline = parseInt($("#custom-chatra-button").attr("data-count-operators"));
+        if(countOperatorsOnline > 0 && chartaChatStatusTimeout == 0 && !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            var time  = parseInt($("#custom-chatra-button").attr("data-chatra-timeout"));
+            time = time > 0 ? time * 1000 : 90000;
+            setTimeout(function(){
+                Chatra('show', true);
+                Chatra('expandWidget', true);
+                setCookie('chartaChatStatusTimeout', 1, 7);
+                setCookie('chartaChatStatus', 1, 1000);
+            },  time);
+        }
+
+    });
+</script></body>
+</html>

@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Restaurant;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Storage;
 
 class GetParserRestaurants extends Command
 {
@@ -39,25 +40,31 @@ class GetParserRestaurants extends Command
     public function handle()
     {
         $content = file_get_contents('https://misteram.com.ua/chernigov');
-        $items = explode('<div class="head">', $content);
+        file_put_contents('restaurants.html', $content);die;
+
+        $items = explode('<div class="name">', $content);
         unset($items[0]);
         foreach ($items as $item) {
-            $info = explode('<div class="name">', $item)[1];
-            $value = explode('solid">', $info)[1];
-            $name = explode('</', $value)[0];
-            var_dump($name);die;
+            $info = explode('solid">', $item)[1];
+            $name = explode('</', $info)[0];
 
-            $image = explode('<img src="', $item)[1];
-            $img_url = explode(' alt="', $image)[0];
-            $img_info = explode('/', $img_url);
-            $img_name = $img_info[count($img_info) - 1];
-            $picture = file_put_contents('storage/app/public/'. $img_name,
-                @file_get_contents('https://misteram.com.ua/chernigov'. $img_url));
+                $image = explode('<img src="', $item)[1];
+                $img_url = explode('" alt=', $image)[0];
+                $img_info = explode('/', $img_url);
+                $img_name = $img_info[count($img_info) - 1];
+                $picture = file_put_contents('storage/app/public/uploads/' . $img_name,
+                    file_get_contents($img_url));
+
+//                    $path = Storage::disk('public')->path('uploads/'.$img_name);
+                    $path = 'uploads/'.$img_name;
+
+                    $bd = new Restaurant();
+                    $bd->name = $name;
+                    $bd->image = $path;
+                    $bd->save();
+            }
+
 
         }
 
-        $bd = new Restaurant();
-        $bd->name = $name;
-        $bd->save();
-    }
 }

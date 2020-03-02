@@ -1,0 +1,28 @@
+Array
+(
+    [update_id] => 532585231
+    [message] => Array
+        (
+            [message_id] => 26
+            [from] => Array
+                (
+                    [id] => 446425762
+                    [is_bot] => 
+                    [first_name] => Viktoriia
+                    [last_name] => Obytotska
+                    [language_code] => ru
+                )
+
+            [chat] => Array
+                (
+                    [id] => 446425762
+                    [first_name] => Viktoriia
+                    [last_name] => Obytotska
+                    [type] => private
+                )
+
+            [date] => 1582445825
+            [text] => hi
+        )
+
+)
