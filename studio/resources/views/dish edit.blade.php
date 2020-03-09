@@ -31,7 +31,7 @@
                         </div>
                         <div class=" main__item">
                             <label id="image_label" class="main__clause">Обрати зображення</label>
-{{--                            <input id="image" value="{{asset('storage/'.$dishes['image'])}}" name="picture" type="file">--}}
+                            <input id="image" value="{{asset('storage/'.$dishes['image'])}}" name="picture" type="file">
                             <button type="submit" class="btn btn-primary">Зберегти</button>
                         </div>
                     </form>

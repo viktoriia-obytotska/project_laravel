@@ -5,11 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-2">
             <div class="list-group">
-                <a href="{{route('show_dishes', ['restaurant'=>$restaurant->name])}}" class="list-group-item list-group-item-action active">
+                <a href="{{route('show_dish', ['restaurant'=>$dishes->name])}}" class="list-group-item list-group-item-action active">
                     Усi страви
                 </a>
                 @foreach($categories as $category)
-                    <a href="#" class="list-group-item list-group-item-action">{{$category->name}}</a>
+                    <a href="{{route('dish_category', ['category'=>$category->name])}}"
+                       class="list-group-item list-group-item-action">{{$category->name}}</a>
                 @endforeach
             </div>
         </div>
@@ -17,7 +18,7 @@
             <div class="card">
                         <div class="card">
                             <div class="card-body">
-                                @foreach($restaurant->dish as $dish)
+                                @foreach($dishes->dish as $dish)
                                     <div class="card mb-3" style="max-width: 680px;">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Conversations\basketConversation;
 use App\Conversations\mainConversation;
 use App\Conversations\SelectCategoryConversation;
 use BotMan\BotMan\BotMan;
@@ -35,5 +36,10 @@ class BotManController extends Controller
     public function startConversation(BotMan $bot)
     {
         $bot->startConversation(new mainConversation());
+    }
+
+    public function orderConversation(BotMan $bot)
+    {
+        $bot->startConversation(new basketConversation());
     }
 }

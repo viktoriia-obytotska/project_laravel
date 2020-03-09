@@ -11,13 +11,34 @@ use Illuminate\Http\Request;
 
 class DishController extends Controller
 {
-    public function show($restaurant)
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index()
     {
         $categories = Category::get();
-        $dishes = Restaurant::with('dish')->where('name', '=', $restaurant)->first();
+        $restaurants = Restaurant::get();
 
+        return view('add dish', compact('categories', 'restaurants'));
+    }
+
+    public function create(Request $request, DishesService $service)
+    {
+        $service->save($request);
+
+        $categories = Category::get();
+        $restaurants = Restaurant::get();
+        return redirect()->route('show_dishes');
+    }
+
+    public function show($name)
+    {
+        $categories = Category::get();
+        $restaurant = Restaurant::with('dish')->where('name', '=', $name)->first();
 //var_dump($dishes);die;
-        return view('dishes', compact('dishes', 'categories'));
+        return view('dishes', compact('restaurant', 'categories'));
     }
 
     public function edit($id, $dishId)
@@ -33,8 +54,8 @@ class DishController extends Controller
     public function update(Request $request, DishesService $service, $id, $dishId)
     {
         $service->update($request, $id, $dishId);
-
-            return redirect()->route('show_dishes', $id);
+        $restaurant = Restaurant::select('name')->where('id', '=', $id)->first();
+        return redirect()->route('show_dishes', ['restaurant'=> $restaurant->name]);
     }
 
 

@@ -15,16 +15,13 @@ class RestaurantsService
 
     public function save(RestaurantValidatorRequest $request)
     {
-        $name = $request->input('name_restaurant');
+        $name = $request->input('name');
         $image = $request->file('image')->store('uploads', 'public');
         $category = $request->input('category');
-        $dish = $request->input('name_dish');
-        $description = $request->input('description');
-        $price = $request->input('price');
-        $picture = $request->file('picture')->store('uploads', 'public');
+
 
         $restaurants = new Restaurant();
-        $restaurants->name = $request->name_restaurant;
+        $restaurants->name = $request->name;
         $restaurants->image = $image;
 
         $restaurants->save();
@@ -33,17 +30,6 @@ class RestaurantsService
         $categories->name = $request->category;
 
         $categories->save();
-
-        $dishes = new Dish();
-        $dishes->title = $request->name_dish;
-        $dishes->description = $request->description;
-        $dishes->price = $request->price;
-        $dishes->image = $picture;
-        $dishes->category_id= $categories->id;
-        $dishes->restaurant_id =$restaurants->id;
-
-        $dishes->save();
-
 
     }
 
