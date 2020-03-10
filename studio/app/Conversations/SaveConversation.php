@@ -34,9 +34,7 @@ class SaveConversation extends Conversation
         $user = $this->bot->userStorage()->find();
 
         $address = new Address();
-        $address->street = $user->get('street');
-        $address->house = $user->get('house');
-        $address->apartment = $user->get('apartment');
+        $address->address = $user->get('address');
         $address->save();
 
         $client = new Client();
@@ -47,11 +45,12 @@ class SaveConversation extends Conversation
 
         $order = new Order();
         $order->client_id = $client->id;
-        $order->dish_id = $user->get('order');
-        $order->amount = $user->get('amount');
+        $order->address_id = $address->id;
+        $order->dish_id = $user->get('order_v2');
+//        $order->amount = $user->get('amount');
+        $order->amount = 1;
         $order->delivery_sum = 45;
         $order->time_delivery = $user->get('time');
-        $order->address_id = $address->id;
         $order->save();
 
 

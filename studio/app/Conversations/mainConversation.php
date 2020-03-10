@@ -125,18 +125,32 @@ class mainConversation extends Conversation
         }
     }
 
+    private function countDish(){
+        $keyboard = Keyboard::create()
+            ->type(Keyboard::TYPE_INLINE)
+            ->addRow(KeyboardButton::create('-')->callbackData('minus'),
+                KeyboardButton::create('')->callbackData('count'),
+                KeyboardButton::create('+')->callbackData('plus'))
+            ->toArray();
+    }
+
     private function askOrder()
     {
         $question = BotManQuestion::create("Це все?" . PHP_EOL . "Можливо ще щось?");
 
         $question->addButtons([
             Button::create('Так')->value(1),
+            Button::create('Моє замовлення')->value('order')
 
         ]);
         $this->ask($question, function (BotManAnswer $answer) {
             if ($answer->isInteractiveMessageReply()) {
+                if($answer->getValue() === 'order'){
+                    $this->bot->startConversation(new basketConversation());
+                } else {
+                    $this->askCategory();
+                }
 
-                $this->askCategory();
             }
         });
     }

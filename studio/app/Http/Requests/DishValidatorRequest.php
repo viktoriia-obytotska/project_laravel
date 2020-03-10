@@ -28,6 +28,8 @@ class DishValidatorRequest extends FormRequest
             'description' => 'required|min:10',
             'price' => 'required|numeric',
             'picture' => 'required|image',
+            'category' => 'required|exists:categories,id',
+            'restaurant' => 'required|exists:restaurants,id',
 
         ];
     }

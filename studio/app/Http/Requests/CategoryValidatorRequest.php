@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RestaurantValidatorRequest extends FormRequest
+class CategoryValidatorRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,8 @@ class RestaurantValidatorRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' =>'required|min:3|max:30',
-            'image' => 'required|image',
-            'category' => 'required|exists:categories,id',
+
+            'category' => 'required|min:3|max:30',
         ];
     }
 }

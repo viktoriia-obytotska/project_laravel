@@ -19,27 +19,21 @@ class RestaurantsService
         $image = $request->file('image')->store('uploads', 'public');
         $category = $request->input('category');
 
-
         $restaurants = new Restaurant();
-        $restaurants->name = $request->name;
+        $restaurants->name = $name;
         $restaurants->image = $image;
 
         $restaurants->save();
 
-        $categories = new Category();
-        $categories->name = $request->category;
-
-        $categories->save();
-
     }
 
-    public function update(Request $request, $id)
+    public function update(RestaurantValidatorRequest $request, $id)
     {
-        $name = $request->input('name_restaurant');
+        $name = $request->input('name');
         $image = $request->file('image')->store('uploads', 'public');
 
         $restaurants = Restaurant::find($id);
-        $restaurants->name = $request->name_restaurant;
+        $restaurants->name = $name;
         $restaurants->image = $image;
 
         $restaurants->save();

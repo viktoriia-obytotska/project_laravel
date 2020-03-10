@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-2">
             <div class="list-group">
-                <a href="{{route('show_dish', ['restaurant'=>$dishes->name])}}" class="list-group-item list-group-item-action active">
+                <a href="{{route('show_dish', ['restaurant'=>$restaurant->name])}}" class="list-group-item list-group-item-action active">
                     Усi страви
                 </a>
                 @foreach($categories as $category)

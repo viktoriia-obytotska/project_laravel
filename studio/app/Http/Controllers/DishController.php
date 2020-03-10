@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Dish;
+use App\Http\Requests\DishValidatorRequest;
 use App\Restaurant;
 use App\Services\DishesService;
 use App\Services\RestaurantsService;
@@ -24,20 +25,20 @@ class DishController extends Controller
         return view('add dish', compact('categories', 'restaurants'));
     }
 
-    public function create(Request $request, DishesService $service)
+    public function create(DishValidatorRequest $request, DishesService $service)
     {
         $service->save($request);
 
         $categories = Category::get();
         $restaurants = Restaurant::get();
-        return redirect()->route('show_dishes');
+        return redirect()->route('main', compact('categories', 'restaurants'));
     }
 
     public function show($name)
     {
         $categories = Category::get();
         $restaurant = Restaurant::with('dish')->where('name', '=', $name)->first();
-//var_dump($dishes);die;
+
         return view('dishes', compact('restaurant', 'categories'));
     }
 
@@ -48,10 +49,9 @@ class DishController extends Controller
             return view('dish edit', compact('dishes'));
         }
 
-
     }
 
-    public function update(Request $request, DishesService $service, $id, $dishId)
+    public function update(DishValidatorRequest $request, DishesService $service, $id, $dishId)
     {
         $service->update($request, $id, $dishId);
         $restaurant = Restaurant::select('name')->where('id', '=', $id)->first();
@@ -66,6 +66,6 @@ class DishController extends Controller
             $dishes->delete();
         }
 
-        return redirect()->route('show_dishes', $id);
+        return redirect()->route('show_dishes', $id)->with('status', 'Ваш запис було видалено!');
     }
 }

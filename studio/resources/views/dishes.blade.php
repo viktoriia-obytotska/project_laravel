@@ -9,7 +9,8 @@
                     Усi страви
                 </a>
                 @foreach($categories as $category)
-                    <a href="#" class="list-group-item list-group-item-action">{{$category->name}}</a>
+                    <a href="{{route('dish_category', ['category'=>$category->name])}}"
+                       class="list-group-item list-group-item-action">{{$category->name}}</a>
                 @endforeach
             </div>
         </div>

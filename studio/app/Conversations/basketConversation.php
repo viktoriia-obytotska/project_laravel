@@ -41,25 +41,22 @@ class basketConversation extends Conversation
 
     private function getBasket()
     {
-        $question = BotManQuestion::create("Ваше замовлення:");
+        $question = BotManQuestion::create("Ваше замовлення:" . PHP_EOL . "(вартiсть доставки - 45 грн)");
         $user = $this->bot->userStorage()->find();
         $order = $user->get('order_v2');
         $dishes = json_decode($order, true);
         $lists = Dish::whereIn('id', $dishes)->get();
+        $sum = collect($lists)->sum('price');
 
-//        $question->addButton(Button::create($order)->value('dish'));
         foreach ($lists as $list) {
-            $info = $list->title;
+            $info = $list->title . PHP_EOL;
             $info .= $list->price . 'грн';
             $question->addButtons([
                 Button::create($info)->value('dish'),
-//            Button::create($user->get('test'))->value('dish2'),
 
             ]);
-
-
         }
-        $question->addButton(Button::create('Оформити замовлення✔️' . $list->price . 'грн')->value('checkout'));
+        $question->addButton(Button::create('Оформити замовлення✔️' . ($sum + 45). 'грн')->value('checkout'));
         $this->ask($question, function (BotManAnswer $answer) {
             if ($answer->isInteractiveMessageReply()) {
                 switch ($answer->getValue()) {
@@ -96,10 +93,7 @@ class basketConversation extends Conversation
         $this->ask('Введiть адресу доставки (вулиця, будинок, квартира)' . PHP_EOL .
             'Наприклад: пр. Миру, 42А, 15', function (BotManAnswer $answer) {
             $this->bot->userStorage()->save([
-                $data = explode(',', $answer->getText()),
-                'street' => $data[0],
-                'house' => $data[1],
-                'apartment' => $data[2]
+                'address' => $answer->getText(),
             ]);
 
             $this->say('Чудово!');

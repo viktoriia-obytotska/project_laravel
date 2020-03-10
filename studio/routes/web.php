@@ -20,7 +20,11 @@ Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 
 Auth::routes();
 
-Route::get('/home', 'Controller@index');
+Route::get('/home', 'MainController@index')->name('main');
+
+Route::get('/home/add/category', 'CategoryController@index');
+Route::post('/home/add/category', 'CategoryController@create')->name('add_category');
+
 Route::get('/home/add/restaurant', 'HomeController@index');
 Route::post('/home/add/restaurant', 'HomeController@create')->name('home');
 Route::get('/home/restaurants/', 'HomeController@show')->name('show_restaurants');

@@ -13,9 +13,9 @@
                         @csrf
                         <div class="form-group">
                             <label for="name_restaurant">Назва закладу</label>
-                            <input type="text" name="name_restaurant"
+                            <input type="text" name="name"
                                    value="{{$restaurants['name']}}"
-                                   class="form-control" id="name_restaurant" >
+                                   class="form-control" id="name" >
                         </div>
                         <div class=" main__item">
                             <label id="image_label" class="main__clause">Обрати зображення</label>

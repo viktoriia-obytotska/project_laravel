@@ -33,8 +33,8 @@ class HomeController extends Controller
     public function create(RestaurantValidatorRequest $request, RestaurantsService $service)
     {
         $service->save($request);
-
-        return redirect()->route('show_restaurants');
+        $categories = Category::get();
+        return redirect()->route('show_restaurants', compact('categories'));
     }
 
     public function show()
@@ -54,7 +54,7 @@ class HomeController extends Controller
         return view('restaurant edit', compact('restaurants'));
     }
 
-    public function update(Request $request, RestaurantsService $service, $id)
+    public function update(RestaurantValidatorRequest $request, RestaurantsService $service, $id)
     {
         $service->update($request, $id);
 

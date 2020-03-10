@@ -15,6 +15,7 @@
                     @endif
                         <div class="list-group">
                             <a href="{{route('home')}}" class="list-group-item list-group-item-action">Додати новий заклад</a>
+                            <a href="{{route('add_category')}}" class="list-group-item list-group-item-action">Додати нову категорію</a>
                             <a href="{{route('add_dish')}}" class="list-group-item list-group-item-action">Додати нову страву</a>
                             <a href="{{route('show_restaurants')}}" class="list-group-item list-group-item-action">Список закладiв</a>
                             <a href="{{route('orders')}}" class="list-group-item list-group-item-action">Список замовлень</a>

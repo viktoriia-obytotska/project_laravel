@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.apps')
 
 @section('content')
 <div class="container">
@@ -12,19 +12,19 @@
                           method="post" id="form" class="main__add" enctype= multipart/form-data>
                         @csrf
                         <div class="form-group">
-                            <label for="name_restaurant">Назва страви</label>
-                            <input type="text" name="name_dish"
+                            <label for="name">Назва страви</label>
+                            <input type="text" name="name"
                                    value="{{$dishes['title']}}"
-                                   class="form-control" id="name_dish" >
+                                   class="form-control" id="name" >
                         </div>
                         <div class="form-group">
-                            <label for="name_restaurant">Опис</label>
+                            <label for="description">Опис</label>
                             <input type="text" name="description"
                                    value="{{$dishes['description']}}"
                                    class="form-control" id="description" >
                         </div>
                         <div class="form-group">
-                            <label for="description">Цiна</label>
+                            <label for="price">Цiна</label>
                             <input type="text" name="price"
                                    value="{{$dishes['price']}}"
                                    class="form-control" id="price">
