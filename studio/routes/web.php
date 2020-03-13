@@ -16,7 +16,6 @@ Route::get('/', function () {
 });
 
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
-//Route::get('/botman/tinker', 'BotManController@tinker');
 
 Auth::routes();
 
@@ -36,9 +35,8 @@ Route::get('/home/restaurants/{id}/delete', 'HomeController@destroy')->name('des
 Route::get('/home/add/dish', 'DishController@index');
 Route::post('/home/add/dish', 'DishController@create')->name('add_dish');
 Route::get('/home/{restaurant}/dishes', 'DishController@show')->name('show_dishes');
-Route::get('/home/dishes/{category}', 'CategoryController@getDishCategory')->name('dish_category');
 Route::get('/home/{restaurant}/dishes/{id}/edit', 'DishController@edit');
 Route::post('/home/{restaurant}/dishes/{id}/edit', 'DishController@update')->name('edit_dish');
 Route::get('/home/dishes/{id}/delete', 'DishController@destroy')->name('destroy_dish');
 
-Route::get('/home/orders', 'OrderController@index')->name('orders');
+Route::get('/home/orders', 'OrderController@show')->name('show_orders');

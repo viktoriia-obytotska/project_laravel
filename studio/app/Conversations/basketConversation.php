@@ -26,19 +26,6 @@ class basketConversation extends Conversation
         $this->getBasket();
     }
 
-
-    private function keyboard()
-    {
-        $keyboard = [
-            ['Кошик']
-        ];
-        Telegram::replyKeyboardMarkup([
-            'keyboard' => $keyboard,
-            'resize_keyboard' => true,
-            'one_time_keyboard' => true
-        ]);
-    }
-
     private function getBasket()
     {
         $question = BotManQuestion::create("Ваше замовлення:" . PHP_EOL . "(вартiсть доставки - 45 грн)");
@@ -47,6 +34,9 @@ class basketConversation extends Conversation
         $dishes = json_decode($order, true);
         $lists = Dish::whereIn('id', $dishes)->get();
         $sum = collect($lists)->sum('price');
+        $this->bot->userStorage()->save([
+            'sum' =>$sum
+        ]);
 
         foreach ($lists as $list) {
             $info = $list->title . PHP_EOL;

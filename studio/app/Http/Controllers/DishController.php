@@ -55,7 +55,8 @@ class DishController extends Controller
     {
         $service->update($request, $id, $dishId);
         $restaurant = Restaurant::select('name')->where('id', '=', $id)->first();
-        return redirect()->route('show_dishes', ['restaurant'=> $restaurant->name]);
+        return redirect()->route('show_dishes', ['restaurant'=> $restaurant->name])
+                         ->with('status', 'Ваш запис було оновлено!');
     }
 
 

@@ -46,7 +46,6 @@ class DishesService
             $picture = $request->file('picture')->store('uploads', 'public');
         }
 
-
         $dish->title = $name;
         $dish->description = $description;
         $dish->price = $price;

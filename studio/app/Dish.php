@@ -17,4 +17,9 @@ class Dish extends Model
     {
         return $this->hasOne(Category::class, 'id', 'category_id');
     }
+
+    public function order()
+    {
+        return $this->belongsToMany(Order::class, 'order_dish');
+    }
 }

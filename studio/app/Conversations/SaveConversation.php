@@ -33,27 +33,34 @@ class SaveConversation extends Conversation
     private function save(){
         $user = $this->bot->userStorage()->find();
 
-        $address = new Address();
-        $address->address = $user->get('address');
+        $address = Address::firstOrCreate(['address'=>$user->get('address')]);
         $address->save();
 
         $client = new Client();
-        $client->first_name = $this->bot->getUser()->getFirstName();
-        $client->last_name = $this->bot->getUser()->getLastName();
         $client->phone = $user->get('phone');
+        $client = Client::firstOrCreate(['first_name'=>$this->bot->getUser()->getFirstName(),
+                                         'last_name'=>$this->bot->getUser()->getLastName()]);
+
         $client->save();
 
-        $order = new Order();
-        $order->client_id = $client->id;
-        $order->address_id = $address->id;
-        $order->dish_id = $user->get('order_v2');
-//        $order->amount = $user->get('amount');
-        $order->amount = 1;
-        $order->delivery_sum = 45;
-        $order->time_delivery = $user->get('time');
-        $order->save();
+        $orders = new Order();
+        $orders->client_id = $client->id;
+        $orders->address_id = $address->id;
+        $orders->amount = $user->get('sum')+45;
+        $orders->time_delivery = $user->get('time');
+        $orders->save();
+
+//        $dishes = Dish::find($orders->id);
+//        $order_v2 = $user->get('order_v2');
+//        $values = json_decode($order_v2, true);
+//        foreach ($values as $value)
+//        {
+//            $dishes->dish_id = $value;
+//        }
+//        $dishes->order()->save($dishes);
 
 
-    }
+        }
+
 
 }

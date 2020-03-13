@@ -3,17 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-2">
-            <div class="list-group">
-                <a href="{{route('show_dishes', ['restaurant'=>$restaurant->name])}}" class="list-group-item list-group-item-action active">
-                    Усi страви
-                </a>
-                @foreach($categories as $category)
-                    <a href="{{route('dish_category', ['category'=>$category->name])}}"
-                       class="list-group-item list-group-item-action">{{$category->name}}</a>
-                @endforeach
-            </div>
-        </div>
         <div class="col-md-8">
             <div class="card">
                         <div class="card">

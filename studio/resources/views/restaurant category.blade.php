@@ -17,8 +17,9 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
+                    <div class="row justify-content-center">
                     @foreach($restaurants->restaurant as $restaurant)
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 22rem;">
                         <img src="{{asset('storage/'.$restaurant->image)}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{$restaurant->name}}</h5>

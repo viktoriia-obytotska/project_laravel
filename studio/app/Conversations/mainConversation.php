@@ -47,7 +47,7 @@ class mainConversation extends Conversation
 
     private function askCategory()
     {
-        $question = BotManQuestion::create("Чудово! Обирай категорію:");
+        $question = BotManQuestion::create("Чудово! Обирай категорію ресторану:");
 
         $categories = Category::get();
         foreach ($categories as $category) {
@@ -86,7 +86,7 @@ class mainConversation extends Conversation
         $dishes = Dish::select('dishes.*')
             ->leftJoin('restaurants', 'dishes.restaurant_id', '=', 'restaurants.id')
             ->where('restaurants.name', '=', $restaurant)
-            ->limit(2)
+            ->limit(5)
             ->offset($page * 2 - 2)
             ->get();
 
@@ -125,14 +125,6 @@ class mainConversation extends Conversation
         }
     }
 
-    private function countDish(){
-        $keyboard = Keyboard::create()
-            ->type(Keyboard::TYPE_INLINE)
-            ->addRow(KeyboardButton::create('-')->callbackData('minus'),
-                KeyboardButton::create('')->callbackData('count'),
-                KeyboardButton::create('+')->callbackData('plus'))
-            ->toArray();
-    }
 
     private function askOrder()
     {

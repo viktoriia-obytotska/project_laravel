@@ -40,7 +40,6 @@ class GetParserRestaurants extends Command
     public function handle()
     {
         $content = file_get_contents('https://misteram.com.ua/chernigov');
-        file_put_contents('restaurants.html', $content);die;
 
         $items = explode('<div class="name">', $content);
         unset($items[0]);

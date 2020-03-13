@@ -38,19 +38,5 @@ class CategoryController extends Controller
         return view('restaurant category', compact('categories', 'restaurants'));
     }
 
-    public function getDishCategory($category, $restaurant){
-//        $categories = Category::get();
 
-//        $dishes = Category::with('dish')->where('name', '=', $category)->first();
-
-
-        $categories = Dish::select('dishes.*', 'restaurants.name as rest_name')
-            ->leftJoin('restaurants', 'dishes.restaurant_id', '=', 'restaurants.id')
-            ->leftJoin('categories', 'dishes.category_id', '=', 'categories.id')
-            ->where('restaurants.name', '=', $restaurant)
-            ->where('categories.name', '=', $category)
-            ->get();
-
-        return view('dish category', compact('categories', 'dishes', 'restaurant'));
-    }
 }
